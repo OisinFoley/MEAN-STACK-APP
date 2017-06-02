@@ -1,0 +1,20 @@
+{
+  "name": "fb-login-token",
+  "version": "0.0.0",
+  "description": "fbLogin",
+  "main": "server.js",
+  "author": {
+    "name": "oisin_000",
+    "email": ""
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.16.1",
+    "express": "^4.14.1",
+    "express-session": "^1.15.3",
+    "mongoose": "^4.8.4",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-facebook": "^2.1.1"
+  }
+}
