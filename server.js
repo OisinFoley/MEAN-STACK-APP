@@ -10,7 +10,7 @@ var mongoose   = require('mongoose');
 
 var bodyParser = require('body-parser'); //parses body into JSON
 var router 	   = express.Router();
-var appRoutes  = require('./app/routes/api')(router);
+var appRoutes  = require('./app/routes/api.js')(router);
 //built in module
 var path 	   = require('path');
 // var passport   = require('passport');

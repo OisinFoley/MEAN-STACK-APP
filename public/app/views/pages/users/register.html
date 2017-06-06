@@ -1,0 +1,20 @@
+<div class="page-header">User Registration</div>
+
+<!-- routes.js has told us we can use the regCtrl controller -->
+<!-- then in userCtrl, you can see whe have a regUser property to access and then interact with -->
+<!-- for this particular scenario, 'this' acts as the dependency injector the way as $scope has in other examples -->
+<!-- we use 'register.' because of the 'controllerAs' alias in our route.js -->
+<form ng-submit="register.regUser(regData);">
+	<label>Email:</label>
+	<input class="form-control" type="text" name="email" placeholder="please enter an email" ng-model="register.regData.email" >
+	<br>
+	<label>Username:</label>
+	<input class="form-control" type="text" name="username" placeholder="please enter a name" ng-model="register.regData.username">
+	<br>
+	<label>Password:</label>
+	<input class="form-control" type="text" name="password" placeholder="please enter a password" ng-model="register.regData.password">
+	<br>
+	<button class="btn btn-primary" type="submit">Register</button>
+</form>
+
+<h1>User Registration Page </h1>

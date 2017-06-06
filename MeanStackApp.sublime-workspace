@@ -31,7 +31,7 @@
 			"file": "server.js",
 			"settings":
 			{
-				"buffer_size": 2185,
+				"buffer_size": 2188,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -49,27 +49,45 @@
 			"file": "public/app/views/index.html",
 			"settings":
 			{
-				"buffer_size": 108,
+				"buffer_size": 4427,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "server/MongoOperations.js",
+			"file": "public/app/views/pages/home.html",
 			"settings":
 			{
-				"buffer_size": 491,
+				"buffer_size": 64,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/passport/passport.js",
+			"file": "public/app/routes.js",
 			"settings":
 			{
-				"buffer_size": 1715,
+				"buffer_size": 1020,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/app/views/pages/users/register.html",
+			"settings":
+			{
+				"buffer_size": 1046,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/app/controllers/userCtrl.js",
+			"settings":
+			{
+				"buffer_size": 638,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -105,9 +123,22 @@
 	},
 	"expanded_folders":
 	[
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/app",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/app/routes",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public/app",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public/app/controllers",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public/app/views",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public/app/views/pages",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public/app/views/pages/users"
 	],
 	"file_history":
 	[
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public/app/app.js",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/public/app/views/pages/about.html",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/app/passport/passport.js",
+		"/home/ofoley/Documents/backups/project ep 1-4 (copy)/MEAN Stack App/server/MongoOperations.js",
 		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/public/app/folder/index.html",
 		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/public/app/views",
 		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/app/models/user.js",
@@ -154,6 +185,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"app/routes",
 			"db objec",
 			"ng",
 			"append",
@@ -178,7 +210,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -187,26 +219,27 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2185,
+						"buffer_size": 2188,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1956,
-								1956
+								471,
+								471
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 181.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -222,20 +255,21 @@
 						"selection":
 						[
 							[
-								56,
-								56
+								1098,
+								1098
 							]
 						],
 						"settings":
 						{
 							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -244,66 +278,7 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 108,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								108,
-								108
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "server/MongoOperations.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
-								1
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/passport/passport.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1715,
+						"buffer_size": 4427,
 						"regions":
 						{
 						},
@@ -316,8 +291,66 @@
 						],
 						"settings":
 						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/app/views/pages/home.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 64,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								47,
+								47
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "public/app/routes.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1020,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1020,
+								1020
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
@@ -325,6 +358,65 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/app/views/pages/users/register.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1046,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1046,
+								1046
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "public/app/controllers/userCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 638,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								638,
+								638
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
