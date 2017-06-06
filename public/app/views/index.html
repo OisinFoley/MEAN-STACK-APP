@@ -9,13 +9,15 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Theme Template for Bootstrap</title>
+    <title>NODE - Theme Template for Bootstrap</title>
 
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
 	<!-- Optional theme -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 
 
 <!--PAGES LOAD FASTER WITH YOUR SCRIPTS AT THE BOTTOM -->
@@ -27,15 +29,30 @@
 
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <!-- main angular files -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
 	<!-- <script src="../../assets/js/angular-route.js"></script> -->
+
+  <!-- angular Config/routes -->
 	<script src="app/app.js"></script>	
 	<script src="app/routes.js"></script>	
+
+  <!-- angular controllers -->
+  <script src="app/controllers/userCtrl.js"></script> 
+  <script src="app/controllers/mainCtrl.js"></script> 
+
+  <!-- angular services -->
+  <script src="app/services/userServices.js"></script> 
+  <script src="app/services/authServices.js"></script> 
+
   </head>
 
-  <body ng-app="userApp">
+<!-- This ctrl was not added to routes.js like the others, we want this controller to be
+      able to be in scope throughout all our different views. Views in the routes file
+      have their controller specified there, hence they're isolated. -->
+  <body ng-app="userApp" ng-controller="mainCtrl as main">
 
     <!-- Fixed navbar -->
     <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -52,8 +69,8 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/register">Register</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
               <ul class="dropdown-menu">
@@ -76,7 +93,9 @@
       <!-- Main jumbotron for a primary marketing message or call to action -->
       <div class="jumbotron">
         <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it.</p>
+        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it 
+        <!-- <span class="glyphicon glyphicon-refresh glyphicon-spin"></span>   -->.
+        </p>
       </div>
 
       <div ng-view><!--  just used to hold our template called through ngRoute -->

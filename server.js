@@ -34,9 +34,11 @@ app.use('/api', appRoutes);
 
 
 //cmd connection to db
-//'"tutorials" needed in URL for non-duplication to be validated'
+//1) '"tutorials" needed in URL for non-duplication to be validated'
 // mongoose.connect('mongodb://localhost:27017/', function(err){
-mongoose.connect('mongodb://localhost:27017/tutorials', function(err){	
+//2) was having routing issue at one point, had to remove the 'tutorials' from the end of the URL, 
+// find out how to set default port(already found) which also includes a sub-directory as part of it
+mongoose.connect('mongodb://localhost:27017/', function(err){	
 	if(err){
 		console.log("NOT connected to the db: " + err);
 	} else {

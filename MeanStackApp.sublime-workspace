@@ -4,16 +4,28 @@
 		"selected_items":
 		[
 			[
+				"user",
+				"userFactory"
+			],
+			[
+				"err",
+				"errorMsg"
+			],
+			[
+				"succ",
+				"successMsg"
+			],
+			[
+				"reg",
+				"regData"
+			],
+			[
 				"use",
 				"username"
 			],
 			[
 				"bod",
 				"body"
-			],
-			[
-				"user",
-				"UserSchema"
 			],
 			[
 				"User",
@@ -28,88 +40,76 @@
 	"buffers":
 	[
 		{
-			"file": "server.js",
+			"file": "public/app/views/pages/users/register.html",
 			"settings":
 			{
-				"buffer_size": 2185,
+				"buffer_size": 1892,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/routes/api.js",
+			"file": "public/app/controllers/userCtrl.js",
 			"settings":
 			{
-				"buffer_size": 1228,
+				"buffer_size": 2107,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/app/services/userServices.js",
+			"settings":
+			{
+				"buffer_size": 577,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/app/app.js",
+			"settings":
+			{
+				"buffer_size": 418,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "public/app/views/index.html",
 			"settings":
 			{
-				"buffer_size": 4085,
+				"buffer_size": 4859,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "public/app/views/pages/home.html",
-			"settings":
-			{
-				"buffer_size": 64,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "public/app/routes.js",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 1021,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "",
-			"file": "public/app/app.js",
-			"file_size": 0,
-			"file_write_time": 131409215301960976,
+			"file": "app/routes/api.js",
 			"settings":
 			{
-				"buffer_size": 0,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "<Div class=\"page-header\">\n\t<h1>hello from about route</h1>\n</Div>",
-			"file": "public/app/views/pages/about.html",
-			"file_size": 0,
-			"file_write_time": 131409213025767525,
-			"settings":
-			{
-				"buffer_size": 65,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "server/MongoOperations.js",
-			"settings":
-			{
-				"buffer_size": 491,
+				"buffer_size": 1236,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "app/passport/passport.js",
+			"contents": "/*GENERAL TIP: 'app' FOLDER HOLDS BACKEND CONTENT */\n/* comment always precedes line it's referring to \t*/\n\nvar express    = require('express');\nvar app \t   = express();\nvar port       = process.env.port || 8080;\n//will return us coloured error codes\nvar morgan     = require('morgan');\nvar mongoose   = require('mongoose');\n\nvar bodyParser = require('body-parser'); //parses body into JSON\nvar router \t   = express.Router();\nvar appRoutes  = require('./app/routes/api')(router);\n//built in module\nvar path \t   = require('path');\n// var passport   = require('passport');\n// var social \t   = require('./app/passport/passport')(app, passport);\n\n\n//app.use(module) is how you interact with all middleware(any)\n//not sure if all modules are middleware \n/* middleware */\napp.use(morgan('dev'));\napp.use(bodyParser.json()); //for parsing application/json, was used for a POST, but prob also needed for a GET\napp.use(bodyParser.urlencoded({ extended:true })); //for parsing application/x-www-form-urlencoded\n/*\tthis how we make our front-end directory available to us here\n\tit basically says wherever this file is(server.js), we have access to the named directory immediately deeper than it\t*/\napp.use(express.static(__dirname + '/public'));\n/*\tusing this we will distinguish between later conflicting Angular routes\nalso means url of '/users' in api.js will render as '/api/users' \t*/\napp.use('/api', appRoutes);\n/* ^^^ order important (listen for response, parse response, then route*/\n\n\n\n//cmd connection to db\n//1) '\"tutorials\" needed in URL for non-duplication to be validated'\n// mongoose.connect('mongodb://localhost:27017/', function(err){\n//2) was having routing issue at one point, had to remove the 'tutorials' from the end of the URL, \n// find out how to set default port(already found) which also includes a sub-directory as part of it\nmongoose.connect('mongodb://localhost:27017/', function(err){\t\n\tif(err){\n\t\tconsole.log(\"NOT connected to the db: \" + err);\n\t} else {\n\t\tconsole.log(\"successfully chchconnected to db\");\n\t}\n});\n\n\n/*  'public' represents front-end\n\tasterisk means no matter what, send the index\n\twatch for missing beginnning slash\t*/\napp.get('*', function(req,res){\n\tres.sendFile(path.join(__dirname + '/public/app/views/index.html' ));\n})\n\n\n\n//server port\napp.listen(port, function(){\n\tconsole.log('running the home world  that port wel call:  ' + port);\n});",
+			"file": "server.js",
+			"file_size": 2441,
+			"file_write_time": 131412391300122502,
 			"settings":
 			{
-				"buffer_size": 1715,
+				"buffer_size": 2380,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -147,13 +147,28 @@
 	},
 	"expanded_folders":
 	[
-		"/home/ofoley/Downloads/fbLoginToken - Copy/MEAN Stack App",
-		"/home/ofoley/Downloads/fbLoginToken - Copy/MEAN Stack App/public",
-		"/home/ofoley/Downloads/fbLoginToken - Copy/MEAN Stack App/public/app",
-		"/home/ofoley/Downloads/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages"
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets"
 	],
 	"file_history":
 	[
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/index.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/routes.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/styles.css",
+		"/home/ofoley/Desktop/testanimate/abc.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/app.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app (backend)/routes/api.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/passport/passport.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/server/MongoOperations.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/about.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/home.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/routes/api.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/server.js",
 		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/public/app/folder/index.html",
 		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/public/app/views",
 		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/app/models/user.js",
@@ -190,7 +205,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 		]
@@ -224,88 +239,57 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "server.js",
+					"file": "public/app/views/pages/users/register.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2185,
+						"buffer_size": 1892,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1956,
-								1956
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 181.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/routes/api.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1228,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								56,
-								56
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/app/views/index.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4085,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1804,
-								1804
+								1486,
+								1421
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 77.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/app/controllers/userCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2107,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								322,
+								322
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -315,25 +299,54 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/app/views/pages/home.html",
+					"buffer": 2,
+					"file": "public/app/services/userServices.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 64,
+						"buffer_size": 577,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								47,
-								47
+								508,
+								508
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"auto_name": "",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/app/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 418,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								346,
+								346
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -344,28 +357,29 @@
 				},
 				{
 					"buffer": 4,
-					"file": "public/app/routes.js",
+					"file": "public/app/views/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 4859,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								489,
+								489
 							]
 						],
 						"settings":
 						{
-							"auto_name": "",
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 137.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 4,
@@ -373,83 +387,25 @@
 				},
 				{
 					"buffer": 5,
-					"file": "public/app/app.js",
+					"file": "public/app/routes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 0,
+						"buffer_size": 1021,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								1021,
+								1021
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "public/app/views/pages/about.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 65,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								65,
-								65
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "server/MongoOperations.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 491,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -459,33 +415,61 @@
 					"type": "text"
 				},
 				{
-					"buffer": 8,
-					"file": "app/passport/passport.js",
+					"buffer": 6,
+					"file": "app/routes/api.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1715,
+						"buffer_size": 1236,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								869,
+								869
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 4,
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 8,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2380,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1841,
+								1841
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 45.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
 					"type": "text"
 				}
 			]
@@ -493,7 +477,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 34.0
 	},
 	"input":
 	{
