@@ -1,0 +1,37 @@
+<div class="page-header">User Registration</div>
+
+<!-- routes.js has told us we can use the regCtrl controller -->
+<!-- then in userCtrl, you can see whe have a regUser property to access and then interact with -->
+<!-- for this particular scenario, 'this' acts as the dependency injector the way as $scope has in other examples -->
+<!-- we use 'register.' because of the 'controllerAs' alias in our route.js -->
+<form ng-submit="register.regUser(regData);">
+	<label>Email:</label>
+	<input class="form-control" type="text" name="email" placeholder="please enter an email" ng-model="register.regData.email" >
+	<br>
+	<label>Username:</label>
+	<input class="form-control" type="text" name="username" placeholder="please enter a name" ng-model="register.regData.username">
+	<br>
+	<label>Password:</label>
+	<input class="form-control" type="text" name="password" placeholder="please enter a password" ng-model="register.regData.password">
+	<br>
+	<button class="btn btn-primary" type="submit">Register</button>
+</form>
+
+<h6>User Registration Page </h6>
+<br><br>
+
+<!-- <span class="glyphicon glyphicon-repeat fast-right-spinner"></span> -->
+
+<div class="jumbotron text-center" ng-show="register.loading">
+	<span class="glyphicon glyphicon-refresh glyphicon-spin"></span>	
+	<!-- <span class="glyphicon glyphicon-repeat spinner"></span>	 -->
+	<p>Loading....</p>
+</div>
+
+<div class="row show-hide-message" ng-show="register.successMsg">
+	<div class="alert alert-success">Success Message: {{	register.successMsg }}</div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="register.errorMsg">
+	<div class="alert alert-danger">Error Message: {{ register.errorMsg }}</div>
+</div>

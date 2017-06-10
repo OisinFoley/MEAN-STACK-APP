@@ -19,6 +19,9 @@ UserSchema.pre('save', function(next) {
   
 });
 
+UserSchema.methods.comparePassword = function(password){
+	return bcrypt.compareSync(password, this.password); // this.password being the hashed password stored away 
+}
 
 //careful of writing model as the object of exports, and the same with mongoose being the object of model property
 module.exports = mongoose.model('User', UserSchema);
