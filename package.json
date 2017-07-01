@@ -1,6 +1,6 @@
 {
   "name": "Film-social-media-app",
-  "version": "1.7.2",
+  "version": "1.7.3",
   "description": "MEAN-stack app acting as a wiki, for chatting and getting news pertaining to film and tv.",
   "main": "server.js",
   "author": {
