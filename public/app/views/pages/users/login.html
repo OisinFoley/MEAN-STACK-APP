@@ -13,6 +13,8 @@
 	<br>
 	<button class="btn btn-primary" type="submit">Login</button>&nbsp
 	<button type="button" class="btn btn-success" ng-click="main.facebook();">Facebook</button>
+	<button type="button" class="btn btn-warning" ng-click="main.twitter();">Twitter</button>
+	<button type="button" class="btn btn-info btn-lg" ng-click="main.google();">Google</button>
 </form>
 
 <h6>User Login Page </h6>
@@ -35,5 +37,12 @@
 </div>
 <br>
 <div class="row show-hide-message" ng-show="facebook.errorMsg">
-	<div class="alert alert-danger">Facebook Error Message: m {{ facebook.errorMsg }}</div>
+	<div class="alert alert-danger">Facebook Error Message: f {{ facebook.errorMsg }}</div>
+</div>
+<div class="row show-hide-message" ng-show="twitter.errorMsg">
+	<div class="alert alert-danger">Twitter Error Message: t {{ twitter.errorMsg }}</div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="google.errorMsg">
+	<div class="alert alert-danger">Facebook Error Message: g {{ google.errorMsg }}</div>
 </div>

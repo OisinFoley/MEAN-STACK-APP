@@ -1,11 +1,15 @@
 {
-  "name": "fb-login-token",
-  "version": "0.0.0",
-  "description": "fbLogin",
+  "name": "Film-social-media-app",
+  "version": "1.7.2",
+  "description": "MEAN-stack app acting as a wiki, for chatting and getting news pertaining to film and tv.",
   "main": "server.js",
   "author": {
-    "name": "oisin_000",
-    "email": ""
+    "name": "Oisin Foley",
+    "email": "oisinfoley@yahoo.co.uk"
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/OisinFoley/MEAN-STACK-APP"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -14,8 +18,12 @@
     "express-session": "^1.15.3",
     "jsonwebtoken": "^7.4.1",
     "mongoose": "^4.8.4",
+    "mongoose-title-case": "0.0.4",
+    "mongoose-validator": "^1.2.5",
     "morgan": "^1.8.2",
     "passport": "^0.3.2",
-    "passport-facebook": "^2.1.1"
+    "passport-facebook": "^2.1.1",
+    "passport-google-oauth": "^1.0.0",
+    "passport-twitter": "^1.0.4"
   }
 }

@@ -29,7 +29,15 @@ angular.module('authServices',[])
 		AuthToken.setToken(token);
 	}
 
+	// Auth.twitter()
+	authFactory.twitter = function(token){
+		AuthToken.setToken(token);
+	}
 
+	// Auth.google()
+	authFactory.google = function(token){
+		AuthToken.setToken(token);
+	}
 
 	//auth.getUser()
 	authFactory.getUser = function(){
