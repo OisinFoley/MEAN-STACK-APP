@@ -39,9 +39,6 @@ angular.module('mainCtrl',['authServices'])
 		, as the code implies	*/
 
 		if($location.hash() == '_=_') $location.hash(null);
-
-
-
 	});
 	
 	this.facebook = function() {
@@ -52,7 +49,16 @@ angular.module('mainCtrl',['authServices'])
 		// long way to manually change URL
 		//doing this stops us from having multiple tabs for all of our test clicks. now a single redirect
 		$window.location = $window.location.protocol + '//' + $window.location.host + '/auth/facebook';
-	}
+	};
+
+	this.twitter = function() {		
+		$window.location = $window.location.protocol + '//' + $window.location.host + '/auth/twitter';
+	};
+
+
+	this.google = function() {		
+		$window.location = $window.location.protocol + '//' + $window.location.host + '/auth/google';
+	};
 
 	this.doLogin = function(loginData){	
 		app.loading = true;

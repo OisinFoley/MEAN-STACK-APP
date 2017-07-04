@@ -1,0 +1,18 @@
+<div class="page-header">Account Activation</div>
+
+<!-- routes.js has told us we can use the regCtrl controller -->
+<!-- then in userCtrl, you can see whe have a regUser property to access and then interact with -->
+<!-- for this particular scenario, 'this' acts as the dependency injector the way as $scope has in other examples -->
+<!-- we use 'register.' because of the 'controllerAs' alias in our route.js -->
+
+<br><br>
+
+
+<div class="row show-hide-message" ng-show="email.successMsg">
+	<div class="alert alert-success">Success Message: {{	email.successMsg }}</div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="email.errorMsg">
+	<div class="alert alert-danger">Error Message: {{ email.errorMsg }}</div>
+</div>
+<br>
