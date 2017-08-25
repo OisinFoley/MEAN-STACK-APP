@@ -1,0 +1,15 @@
+About a week before submission date, I ahd to rewrite my database models completely as I was using lin tables like in an RDBMS, thinkking it would suffice, as there isn't a community wide agreeance on how best to model data in Mongo. As a result of this rewrite, I though it may be benefifical for myself to leave remnants of the old schemas around.
+
+As such, the naming conventions may be a tad confusing.
+
+In brief, a user is named user.
+A thread or article in the news feed is known as content
+Comments are called posts
+and likes and favourites are self-explanatory.
+You'll see collections of tables and link tables which will match up.
+
+These are the old schema objects, the new schema objects represent a user, and a piece of content,
+with content featuring nested comments and favourites, and those comments having nested likes.
+Their naming follows the convention of User, and ContentNew.
+
+All other code in the app is sufficiently concise and commented, so should be understandable.

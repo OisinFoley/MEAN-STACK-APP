@@ -63,11 +63,9 @@ var UserSchema = new Schema({
   name: {type:String, required:true, validate : nameValidator }, //setting validation
   email : {type:String, lowercase:true, required:true, unique:true, validate : emailValidator},
   username: {type:String, lowercase:true, required:true, unique:true, validate : usernameValidator}, 
-  password: {type:String, required:true, validate : passwordValidator }  
+  password: {type:String, required:true, validate : passwordValidator },  
+  uuid: {type:String, required:true}  
 });
-
-
-
 
 
 /*encrypt schema just before save, pword-only*/
@@ -85,9 +83,22 @@ UserSchema.plugin(titlize, {
   paths: [ 'name' ]  
 });
 
+
+
+
 UserSchema.methods.comparePassword = function(password){
   return bcrypt.compareSync(password, this.password); // this.password being the hashed password stored away 
 }
 
+//can be used later
+//in app, user will click add interest, type something, then it's saved
+//later, we can load articles/threads where .title.contains(somePartOfTheInterestName);
+// var UserInterests = new Schema({
+//   UserId: {type:Number, required:true }, 
+//   InterestName : {type:String, required:true},  
+// });
+
 //careful of writing model as the object of exports, and the same with mongoose being the object of model property
+//module.exports = mongoose.model('User', UserSchema, ContentSchema, PostSchema, UserPostSchema, PostLikeSchema, ContentLikeSchema, PhotoSchema, TagSchema, PhotoTagSchema);
 module.exports = mongoose.model('User', UserSchema);
+

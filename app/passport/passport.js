@@ -35,7 +35,7 @@ module.exports = function(app,passport){
 	  	
 	  	console.log("email from fb token is : " + profile._json.email);
 	  	
-	  	User.findOne({ email: profile._json.email }).select('username password email').exec(function(err, user) {
+	  	User.findOne({ email: profile._json.email }).select('username uuid password email').exec(function(err, user) {
 	  		
 	  		if(user && user != null) {
 	  			done(null, user);
@@ -60,7 +60,7 @@ module.exports = function(app,passport){
 	  	console.log("Profile is : " + profile);
 	  	console.log("Profile is : " + profile.emails[0].value);
 
-	  	User.findOne({ email: profile.emails[0].value }).select('username password email').exec(function(err, user) {
+	  	User.findOne({ email: profile.emails[0].value }).select('username uuid password email').exec(function(err, user) {
 	  		
 	  		if(user && user != null) {
 	  			done(null, user);
@@ -94,7 +94,7 @@ module.exports = function(app,passport){
 	  	/* util will work on even a general javascript object, whereas json.stringify will not. handy to know
 	  	https://stackoverflow.com/questions/10729276/how-can-i-get-the-full-object-in-node-jss-console-log-rather-than-object*/
 	  		  	
-	    User.findOne({ email: profile.emails[0].value }).select('username password email').exec(function(err, user) {
+	    User.findOne({ email: profile.emails[0].value }).select('username uuid password email').exec(function(err, user) {
 	  		
 	  		if(user && user != null) {
 	  			done(null, user);

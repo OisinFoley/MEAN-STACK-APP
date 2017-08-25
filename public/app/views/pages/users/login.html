@@ -1,48 +1,58 @@
-<div class="page-header">User Login	</div>
+<div class="page-header" > <h4 ng-class="{'formLabels':loginForm}">User Login	</h4></div>
 
-<!-- routes.js has told us we can use the regCtrl controller -->
+<!-- routes.js specifies ctrl alias -->
 <!-- then in userCtrl, you can see whe have a regUser property to access and then interact with -->
-<!-- for this particular scenario, 'this' acts as the dependency injector the way as $scope has in other examples -->
-<!-- we use 'register.' because of the 'controllerAs' alias in our route.js -->
-<form ng-submit="main.doLogin(loginData);">	
-	<label>Username:</label>
+<!-- 'this' acts as the dependency injector the way as $scope has  -->
+
+<form name="loginForm" ng-submit="main.doLogin(loginData);">	
+	<label ng-class="{'formLabels':loginForm}">Username:</label>
 	<input class="form-control" type="text" name="username" placeholder="please enter a name" ng-model="main.loginData.username">
 	<br>
-	<label>Password:</label>
-	<input class="form-control" type="text" name="password" placeholder="please enter a password" ng-model="main.loginData.password">
+	<label ng-class="{'formLabels':loginForm}">Password:</label>
+	<input class="form-control" type="password" name="password" placeholder="please enter a password" ng-model="main.loginData.password">
 	<br>
-	<button class="btn btn-primary" type="submit">Login</button>&nbsp
-	<button type="button" class="btn btn-success" ng-click="main.facebook();">Facebook</button>
-	<button type="button" class="btn btn-warning" ng-click="main.twitter();">Twitter</button>
-	<button type="button" class="btn btn-info btn-lg" ng-click="main.google();">Google</button>
+	<button class="btn btn-warning" type="submit">Login</button>
+	<button type="button" class="btn btn-primary"  ng-click="main.facebook();">Facebook</button>
+	<button type="button" class="btn btn-success" ng-click="main.twitter();">Twitter</button>
+	<button type="button" class="btn btn-info" ng-click="main.google();">Google</button>
 </form>
 
-<h6>User Login Page </h6>
-<br><br>
 
-<!-- <span class="glyphicon glyphicon-repeat fast-right-spinner"></span> -->
 
-<div class="jumbotron text-center" ng-show="main.loading">
-	<span class="glyphicon glyphicon-refresh glyphicon-spin"></span>	
-	<!-- <span class="glyphicon glyphicon-repeat spinner"></span>	 -->
-	<p>Loading....</p>
+<div class="text-center" ng-show="main.loading">
+	<h1>
+		<span class="glyphicon glyphicon-refresh glyphicon-spin"></span>
+		<p ng-class="{'formLabels':loginForm}"><b>Loading....</b></p>
+	</h1>
 </div>
+
 
 <div class="row show-hide-message" ng-show="main.successMsg">
-	<div class="alert alert-success">Success Message: {{	main.successMsg }}</div>
+	<div class="alert alert-success" style="color:#EC1A1A">Success Message: {{	main.successMsg }}</div>
 </div>
 <br>
-<div class="row show-hide-message" ng-show="main.errorMsg">
-	<div class="alert alert-danger">Error Message: {{ main.errorMsg }}</div>
+
+<!-- cant understand why result message isn't styling when using a class, have tried removing and overriding the parent bootstrap class, but still nothing, hence use of inline styling(although frowned upon!) -->
+<div class="show-hide-message" ng-show="main.errorMsg">nnn
+	<div class="alert alert-danger " >
+		<!-- <p class="formErrorResponse">Error Message: {{ main.errorMsg }}</p> -->
+		<p style="color:#0000cc">Error Message: {{ main.errorMsg }}</p>
+	</div>
 </div>
 <br>
-<div class="row show-hide-message" ng-show="facebook.errorMsg">
-	<div class="alert alert-danger">Facebook Error Message: f {{ facebook.errorMsg }}</div>
+<div class=" show-hide-message" ng-show="facebook.errorMsg">
+	<div class="alert alert-danger">
+		<p style="color:#0000cc">Facebook Error Message:  {{ facebook.errorMsg }}</p>
+	</div>
 </div>
-<div class="row show-hide-message" ng-show="twitter.errorMsg">
-	<div class="alert alert-danger">Twitter Error Message: t {{ twitter.errorMsg }}</div>
+<div class=" show-hide-message" ng-show="twitter.errorMsg">
+	<div class="alert alert-danger">
+		<p style="color:#0000cc">Twitter Error Message:  {{ twitter.errorMsg }}</p>
+	</div>
 </div>
 <br>
-<div class="row show-hide-message" ng-show="google.errorMsg">
-	<div class="alert alert-danger">Facebook Error Message: g {{ google.errorMsg }}</div>
+<div class=" show-hide-message" ng-show="google.errorMsg">
+	<div class="alert alert-danger">
+		<p style="color:#0000cc">Facebook Error Message:  {{ google.errorMsg }}</p>
+	</div>
 </div>

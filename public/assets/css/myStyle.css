@@ -1,0 +1,658 @@
+/*used for typeahead styling*/
+.subtitle{
+  font-size: 14px;
+  color: red;
+}
+
+  input{
+  padding: 10px;
+  font-size: 22px;
+  margin: 20px 0 0 0;
+  border-radius: 20px;
+  border: 2px solid #C44741;
+  outline: none;
+  color:red;
+}
+
+.suggestion{
+  width: 400px;
+  margin: auto;
+  text-align: left;
+  margin-top: 10px;
+  /*background: #F2F2F2;*/
+  padding: 10px;
+  box-shadow: 0px 0px 5px #CCC;
+  color:yellow;
+  background:#4b5be5;
+}
+
+.suggestion.title{
+  font-size: 18px;
+  font-weight: bold;
+  color:#33b0d6;
+}
+
+
+/*the following with the name 'sliding'
+handle hover effects on some action links*/
+
+.sliding-middle-out {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+    width: 100%;
+    background: blue;
+}
+
+.sliding-middle-out {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+.sliding-middle-out:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+.sliding-middle-out:hover:after {
+    width: 100%;
+    background: blue;
+}
+
+.sliding-u-l-r-l {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+.sliding-u-l-r-l:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: width 0s ease, background .5s ease;
+}
+.sliding-u-l-r-l:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: blue;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:before {
+    width: 100%;
+    background: red;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+}
+
+.sliding-u-l-r-l-inverse {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 3px;
+}
+.sliding-u-l-r-l-inverse:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    transition: width 0s ease;
+}
+.sliding-u-l-r-l-inverse:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background: blue;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l-inverse:hover:before {
+    width: 0%;
+    background: red;
+    transition: width .5s ease;
+}
+.sliding-u-l-r-l-inverse:hover:after {
+    width: 0%;
+    background: transparent;
+    transition: width 0s ease;
+}
+
+
+/*styles the tooltips for the floating toggle buttons on the right-hand side*/
+
+.tooltippp {
+    position: relative;
+    display: inline-block;    
+}
+
+.tooltippp .tooltippptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #1a35ce;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 105%;
+}
+
+.tooltippp:hover .tooltippptext {
+    visibility: visible;
+}
+
+
+/*used for styling an x icon, though the values are fixed so I opted against using the styling*/
+/*
+.close-button {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0.75em;
+  height: 0.75em;
+  position: relative;
+  border: none;
+  -webkit-border-radius: 1em;
+  border-radius: 1em;
+  font: normal 8em/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #1abc9c;
+}
+
+.close-button::before {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0.45em;
+  height: 0.1em;
+  position: absolute;
+  content: "";
+  top: 0.33em;
+  left: 0.155em;
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #ffffff;
+  text-shadow: none;
+  -webkit-transform: rotateZ(45deg)   ;
+  transform: rotateZ(45deg)   ;
+}
+
+.close-button::after {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 0.45em;
+  height: 0.1em;
+  position: absolute;
+  content: "";
+  top: 0.33em;
+  left: 0.155em;
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgba(0,0,0,1);
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #ffffff;
+  text-shadow: none;
+  -webkit-transform: rotateZ(-45deg)   ;
+  transform: rotateZ(-45deg)   ;
+}*/
+
+
+/*.show-hide-message.ng-hide-remove{
+    -webkit-animation: zoomIn 0.3s both ease;
+    -moz-animation:zoomIn 0.3s both ease;
+    animation:zoomIn 0.3s both ease;
+}
+*/
+.spinner{
+    -webkit-animation: spin 1s infinite;
+    -moz-animation:spin 1s infinite;
+    animation:spin 1s infinite;
+    background:yellow;
+}
+
+
+/*I grabbed the below styling elsewhere*/
+
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+    color:#8cb0ea;
+}
+/*safari syntax*/
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        color:#8cb0ea;
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(359deg);
+        color: :#8cb0ea;
+    }
+}
+/*regular syntax*/
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        color:#8cb0ea;
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+        color:#8cb0ea;
+    }
+}
+
+
+/*Comment List styles*/
+/*used in THREAD.HTML*/
+.comment-list .row {
+  margin-bottom: 0px;
+}
+.comment-list .panel .panel-heading {
+  padding: 4px 15px;
+  position: absolute;
+  border:none;
+  /*Panel-heading border radius*/
+  border-top-right-radius:0px;
+  top: 1px;
+}
+.comment-list .panel .panel-heading.right {
+  border-right-width: 0px;
+  /*Panel-heading border radius*/
+  border-top-left-radius:0px;
+  right: 16px;
+}
+.comment-list .panel .panel-heading .panel-body {
+  padding-top: 6px;
+}
+.comment-list figcaption {
+  /*For wrapping text in thumbnail*/
+  word-wrap: break-word;
+}
+/* Portrait tablets and medium desktops */
+@media (min-width: 768px) {
+  .comment-list .arrow:after, .comment-list .arrow:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent;
+  }
+  .comment-list .panel.arrow.left:after, .comment-list .panel.arrow.left:before {
+    border-left: 0;
+  }
+  /*****Left Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.left:before {
+    left: 0px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-right-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.left:after {
+    left: 1px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-right-color: #FFFFFF;
+    border-width: 15px;
+  }
+  /*****Right Arrow*****/
+  /*Outline effect style*/
+  .comment-list .panel.arrow.right:before {
+    right: -16px;
+    top: 30px;
+    /*Use boarder color of panel*/
+    border-left-color: inherit;
+    border-width: 16px;
+  }
+  /*Background color effect*/
+  .comment-list .panel.arrow.right:after {
+    right: -14px;
+    top: 31px;
+    /*Change for different outline color*/
+    border-left-color: #FFFFFF;
+    border-width: 15px;
+  }
+}
+.comment-list .comment-post {
+  margin-top: 6px;
+}
+
+
+
+
+.formLabels{
+    color:#5cedd9;
+}
+
+
+.red {
+    background-color: red;
+}
+
+
+/*styles error messages in forms throughout the app*/
+.errorMsg{
+    color:#50f442;
+}
+
+.forumMsg{
+    color:#b0ff1e;
+}
+
+
+
+.fader {
+    -moz-transition: opacity 0.7s linear;
+    -o-transition: opacity 0.7s linear;
+    -webkit-transition: opacity 0.7s linear;    
+    /*display:block;*/
+    transition: opacity 0.7s linear;
+
+}
+
+.fader.fadedOut {
+    opacity: 0;
+    /*visibility: hidden;*/
+}
+
+.form-signin {
+  max-width: 35vw; 
+  max-height: 80vw; 
+  width:60vw;
+  margin:0 auto;
+  display:block;
+  background-color: #f7f7f7;
+  -moz-box-shadow: 0 0 3px 3px #888;
+    -webkit-box-shadow: 0 0 3px 3px #888;
+    box-shadow: 0 0 3px 3px #888;
+  border-radius:2px;
+}
+.main{
+    padding: 18px;
+}
+.social-box{
+  margin: 0 auto;
+  padding: 10px;
+  width:85%;
+  border-bottom:1px #ccc solid;
+}
+.social-box a{
+  font-weight:bold;
+  font-size:12px;
+  padding:8px;
+}
+.social-box a i{
+  font-weight:bold;
+  font-size:12px;
+}
+.heading-desc{
+    font-size:14px;
+    font-weight:bold;
+    padding:18px 18px 0px 18px;
+    
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 2px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  font-size: 10px;
+  height: 20px;
+  padding: 5px;
+
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-signin .form-control:focus {
+  z-index: 4;
+}
+.form-signin input[type="text"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+.login-footer{
+    background:#f0f0f0;
+    margin: 0 auto;
+    border-top: 1px solid #dadada;
+    padding:5px;
+}
+.login-footer .left-section a{
+    font-weight:bold;
+    color:#8a8a8a;
+    line-height:19px;
+}
+.mg-btm{
+    margin-bottom:20px;
+}
+
+
+.redShadow{
+    /*box-shadow: 0 4px 8px 0 rgba(245,24,28,1);*/
+    box-shadow: 0rem 0rem 1rem  #4286f4;
+
+    transition: 0.5s;
+    width: 100%;
+    /*border-radius: 50rem;*/
+    /*Can get a curved image using the line above featuring rem*/
+    /*border-radius: 5px;*/
+
+}
+
+.redShadow:hover{
+    /*box-shadow: 0 8px 16px 0 rgba(245,24,28,1);*/
+    box-shadow: 0 0 3rem #4286f4;
+}  
+
+.sampleNavTrans {
+    padding: 20px;
+    background-color: blue;
+    transition: height 1s linear, background-color  1s linear;
+    height: 200px;
+}
+/*.sampleNavTrans:hover {
+    background-color: green;
+    height: 100px;
+}*/
+
+.sampleNavTrans.divTransform {
+    background-color: green;
+    /*height: 100px;*/
+    height:1vh;
+}
+
+.NavOuterbar {
+    background: #CE5A57;
+    transition: font-size .4s linear,  height 1s linear, background-color  1s linear;
+    height: 2vh;
+    position:fixed;
+    top: 0;
+    font-size: 1em;
+    color:blue;
+    z-index:5;
+    width:100%;
+    /*margin:auto;*/
+    /*text-align:center;*/
+
+}
+
+
+.NavOuterbar.shrink {
+    background-color: green;
+    height: 7vh;
+    height: 0vh;
+    position:fixed;
+    /*top: 0;*/
+    font-size: 0.7em;
+
+    /*text-align:center;*/
+}
+
+
+.NavInnerbar {
+    background: #CE5A57;
+    transition: font-size 1s linear,  height 1s linear, background-color  1s linear;
+    /*height: 1vh;*/
+    height: 8vh;    
+    position:fixed;
+    top: 6vh;
+    
+    font-size: 2em;    
+    margin:auto;    
+    text-align:center;
+    z-index:5;
+    width:100%;
+}
+
+.NavInnerbar.shrink {
+    background-color: green;
+    /*height: 10vh;*/
+    height: 1vh;
+    margin:auto;   
+    position:fixed;
+    /*top: 0;*/
+    font-size: 1em;    
+    /*font-size: 2em;*/
+}
+
+
+
+.sample2 {
+    padding: 20px;
+    background-color: #efefef;
+    transition: background-color 1s linear;
+}
+.sample2:hover {
+    background-color: green;
+    transition: background-color 0.1s linear;
+}
+
+
+
+
+tr.social-buttons td a {
+  width: 9vw;
+  /*height: 20px;*/
+  height: 2vh;
+
+  display: block;
+  /*margin-left:5px;*/
+  margin-left:0.5vw;
+
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 1.5em;  
+  line-height: 50px;
+  color: white;
+}
+
+tr#demo1 td a {
+  transition: transform 0.2s linear;
+}
+
+tr#demo1 td:hover a {
+  transform: translateY(-60px);
+}
+
+
+.fa-ubuntu {
+    color: #303866;
+}
+
+.fa-git {
+    color: #25e07f;
+}
+
+.fa-npm {
+    color: #757daa;
+}
+
+.fa-aws {
+    color: #c90842;
+}
+
+.fa-mongodb {
+    color: #00a478;
+}
+
+.fa-ng {
+    color: #ff0084;
+}
+
+.fa-bootstrap {
+    color: #ed0420;
+}
+
+.fa-css3 {
+    color: #f40926;
+}
+
+.fa-nodejs {
+    color: #f40808;
+}
+
+.fa-javascript-alt {
+    color: #e02626;
+}
+

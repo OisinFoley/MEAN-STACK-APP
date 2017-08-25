@@ -1,0 +1,143 @@
+$dahOfssetMax:251.327412287;
+$dahOfssetMin:15;
+$AnimationDur:6.5s;
+//@import url(https://fonts.googleapis.com/css?family=Raleway:600);
+#container {
+  height: 100px;
+  width: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+  transform: rotate(-90deg);
+  animation: container $AnimationDur infinite;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+  background: #F4F4F4;
+  animation-timing-function: ease-in-out;
+}
+
+.preLoader {
+  fill: none;
+  stroke: #EA4335;
+  stroke-width: 4;
+  stroke-dasharray: 251.327412287;
+  stroke-dashoffset: 251.327412287;
+  animation: ofset $AnimationDur infinite;
+  stroke-linecap: round;
+  animation-fill-mode: forwards;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 1);
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes ofset {
+  0% {
+    stroke-dashoffset: $dahOfssetMax;
+    stroke: #EA4335;
+  }
+  12% {
+    stroke-dashoffset: $dahOfssetMin;
+  }
+  24% {
+    stroke: rgba(234, 67, 53, 1);
+  }
+  25% {
+    stroke-dashoffset: -$dahOfssetMax;
+    stroke: rgba(0, 0, 0, 0);
+  }
+  26% {
+    stroke-dashoffset: $dahOfssetMax;
+    stroke: rgba(0, 0, 0, 0);
+  }
+  27% {
+    stroke: rgba(66, 133, 244, 1);
+  }
+  37% {
+    stroke-dashoffset: $dahOfssetMin;
+  }
+  49% {
+    stroke: rgba(66, 133, 244, 1);
+  }
+  50% {
+    stroke-dashoffset: -$dahOfssetMax;
+    stroke: rgba(0, 0, 0, 0);
+  }
+  51% {
+    stroke-dashoffset: $dahOfssetMax;
+    stroke: rgba(0, 0, 0, 0);
+  }
+  52% {
+    stroke: rgba(251, 168, 5, 1);
+  }
+  62% {
+    stroke-dashoffset: $dahOfssetMin;
+  }
+  74% {
+    stroke: rgba(251, 168, 5, 1);
+  }
+  75% {
+    stroke-dashoffset: -$dahOfssetMax;
+    stroke: rgba(0, 0, 0, 0);
+  }
+  76% {
+    stroke-dashoffset: $dahOfssetMax;
+    stroke: rgba(0, 0, 0, 0);
+  }
+  77% {
+    stroke: rgba(52, 168, 83, 1);
+  }
+  87% {
+    stroke-dashoffset: $dahOfssetMin;
+  }
+  100% {
+    stroke-dashoffset: -$dahOfssetMax;
+    stroke: rgba(52, 168, 83, 1);
+  }
+}
+
+@keyframes container {
+  25% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+  75% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+// text on path
+#textWrap {
+  height: 150px;
+  width: 150px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto auto;
+  overflow: visible;
+  #textPath {
+    fill: none;
+  }
+}
+
+.text {
+  font-size: 13px;
+  font-family: 'Raleway', sans-serif;
+}
+
+// body bg 
+#body {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}

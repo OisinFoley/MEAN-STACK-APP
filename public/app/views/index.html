@@ -6,67 +6,96 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>NODE - Theme Template for Bootstrap</title>
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->    
+    <meta name="OisinFoley" content="">
+    <title>Through the Looking Glass - A MEAN Stack App</title>
 
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+	
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-  <link rel="stylesheet" href="assets/css/styles.css">
+
+
+
+
+<!-- following are for fancy image displays -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:300&text=0123456789HIabdeghlmnorstuvwx">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fira+Sans:400">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<!-- <link rel="stylesheet" href="assets/css/hearts.css">   -->
+<link rel="stylesheet" href="assets/css/row.css">  
+<link rel="stylesheet" href="assets/css/fadeOut.css">  
+<!-- <link rel="stylesheet" href="assets/css/ngTags.css"> -->
+<link rel="stylesheet" href="assets/css/myStyle.css">  
+<!-- <link rel="stylesheet" href="assets/css/sidebar.css">   -->
+<link rel="stylesheet" href="app/views/css/flags.css">
+<link rel="stylesheet" href="app/views/css/app.css">
+
+
+<script src="/app/views/js/socket.io.js"></script>
 
 
 <!--PAGES LOAD FASTER WITH YOUR SCRIPTS AT THE BOTTOM -->
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-
-<!-- will use later ourselves after migration -->
-<!-- https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap.js -->
-
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <!-- main angular files -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.js"></script>
-	<!-- <script src="../../assets/js/angular-route.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
+  <!-- <script src="https://code.angularjs.org/1.5.8/angular-touch.min.js"></script> -->  
+	<script src="../../assets/js/angular-route.js"></script>
+
+<!-- only use is for socket.io to provide chat functionality -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+<script src="http://code.jquery.com/ui/jquery-ui-git.js" ></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+ <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+<script src="/app/views/js/client.js"></script>
 
   <!-- angular Config/routes -->
 	<script src="app/app.js"></script>	
 	<script src="app/routes.js"></script>	
 
+  <!-- <script type="text/javascript" src="/../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+  <script type="text/javascript" src="../node_modules/ng-file-upload/dist/ng-file-upload-shim.min.js"></script> -->
+  <script type="text/javascript" src="ng-file-upload/dist/ng-file-upload.min.js"></script>
+  <script type="text/javascript" src="ng-file-upload/dist/ng-file-upload-shim.min.js"></script>
+
+<script src="https://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.2.0/ng-tags-input.bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.2.0/ng-tags-input.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ng-tags-input/3.2.0/ng-tags-input.min.js"></script>
+
   <!-- angular controllers -->
   <script src="app/controllers/userCtrl.js"></script> 
   <script src="app/controllers/mainCtrl.js"></script> 
+  <script src="app/controllers/feedCtrl.js"></script> 
+  <script src="app/controllers/forumCtrl.js"></script> 
+  <script src="app/controllers/imageCtrl.js"></script> 
 
   <!-- angular services -->
   <script src="app/services/userServices.js"></script> 
   <script src="app/services/authServices.js"></script> 
-
+  <script src="app/services/feedServices.js"></script> 
+  <script src="app/services/forumServices.js"></script> 
+  <script src="app/services/imageServices.js"></script> 
+  
   </head>
 
 <!-- This ctrl was not added to routes.js like the others, we want this controller to be
       able to be in scope throughout all our different views. Views in the routes file
       have their controller specified there, hence they're isolated. -->
       <!-- ngCloak prevents the HTML flickering during load -->
-  <body ng-app="userApp" ng-controller="mainCtrl as main" ng-show="main.loadMe" ng-cloak>
+  <body ng-app="userApp" ng-controller="mainCtrl as main" ng-show="main.loadMe" ng-cloak style="background:#b22727">
 
-    <!-- Fixed navbar -->
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav  class="navbar NavOuterbar" ng-class="{'shrink': testResize}">
       <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Bootstrap theme</a>
-        </div>
+        
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="/">Home</a></li>
@@ -74,38 +103,172 @@
             <li><a ng-show="!main.isLoggedIn" href="/register">Register</a></li>
             <li><a ng-show="main.isLoggedIn" href="#" ng-click="main.logout()">Logout</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
+              <a href="#" class="dropdown-toggle"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <ul class="dropdown-menu"  >
+                <li><a href="#" style="position:relative;z-index:30" >Set Profile Picture</a></li>                
+            </li>
+            <li><a ng-show="main.isLoggedIn" href="/profile"><div id="currentUser">{{main.username}}</div> </a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="row"></div>
+    <!-- <nav style="background: yellow" class="navbar navbar-inverse  NavOuterbar" ng-class="{'shrink': startResize}"> -->
+    <nav style="background: yellow" class="navbar navbar-inverse  NavInnerbar" ng-class="{'shrink': testInnerResize}">    
+
+
+      <div class="container">        
+        <!-- index does not seem to be applying  -->
+        <div id="navbar" class="navbar-collapse collapse" style="z-index:102420;position:relative">
+          <ul class="nav navbar-nav col-lg-12">
+          <li class="col-lg-offset-1"></li>            
+            <li><a href="/feed">feed.</a></li>
+            <li><a href="/learn">learn.</a></li>
+            <li><a href="#" ng-click="toggleChat = !toggleChat">chat.</a></li>
+            <li><a href="/forum">forum.</a></li>
+
+            <!-- <li><a  ng-click="main.toNewView(forum)">forum.</a></li> -->
+            <!-- <li><button  ng-click="toForumView()">forum.</button></li> -->
+            <li><a href="/discover">discover</a></li>
+            <li class="dropdown">              
               <!-- easy way to bind our username to the HUD -->
-              <li><a ng-show="main.isLoggedIn" href="/profile">Hello {{main.username}} </a></li>
+              <li><a ng-show="main.isLoggedIn" href="/profile"><div id="currentUser">Hello {{main.username}}</div> </a></li>
             </li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>
-
+    
+    
     <div class="container theme-showcase" role="main">
+          <div id="abc123"  ng-style="mapChatDiv" ng-show="toggleChat"  >            
 
-      <!-- Main jumbotron for a primary marketing message or call to action -->
-      <div class="jumbotron">
-        <h1>Theme example</h1>
-        <p>This is a template showcasing the optional theme stylesheet included in Bootstrap. Use it as a starting point to create something more unique by building on or modifying it 
-        <!-- <span class="glyphicon glyphicon-refresh glyphicon-spin"></span>   -->.
-        </p>
-      </div>
+            <div class="col-md-11 col-md-offset-1 panel panel-default" id="main-chat-screen" ng-style="innerChatDiv">
+            <div class="panel-body">
+                <div class="col-md-3">
+                  <ul id="rooms" class="list-group"></ul>
+                  <ul id="people" class="list-group"></ul>
+                </div>
+                <div class="col-md-7">
+                  <div id="conversation">
+                    <ul id="msgs" class="list-unstyled"></ul>
+                  </div>
+                  <form id="chatForm" class="form-inline">
+                    <div class="form-group">
+                      <input type="text" class="form-control input-lg" placeholder="Your message" id="msg">
+                    </div>
+                    <input type="submit" name="send" id="send" value="Send" class="btn btn-success btn-lg">
+                    <input type="button" name="start_button" id="start_button" value="Record" onclick="startButton(event)" class="btn btn-info btn-lg">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-lg btn-info dropdown-toggle" data-toggle="dropdown" >
+                        Actions <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#" name="createRoom" data-toggle="modal" data-target="#roomModal">Create room</a></li>
+                        <li><a href="#" name="leave" id="leave">Leave current room</a></li>
+                        <li><a href="#" name="disconnect" id="disconnect">Disconnect from chat</a></li>
+                      </ul>
+                    </div>
+                  </form>
+                </div>               
+                 <div class="col-md-2">
 
-      <div ng-view><!--  just used to hold our template called through ngRoute -->
-      </div>
+                  <ul class="list-unstyled" id="updates">
+                  <!-- not displaying for unknown reason -->
+                  <i class="fa fa-window-close" aria-hidden="true"></i>                                      
+                  </ul>
+                </div>
+              </div>
+            </div>                    
+          </div>
 
-    </div> <!-- /container -->
+            <div class="modal fade" id="roomModal" role="dialog" aria-labelledby="createRoomLabel" aria-hidden="true">            
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="createRoomLabel">Create room</h4>
+                  </div>
+                  <div class="modal-body">
+                    You can create a chat room here. Names have to be unique.
+                    <form class="form-inline" id="createRoomForm">
+                      <input type="text" class="form-control input-lg"  placeholder="Room name" id="createRoomName">
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-lg btn-default" data-dismiss="modal">Close</button>
+                    <button data-dismiss="modal" id="createRoomBtn" class="btn btn-success btn-lg">Create room</button>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            
+    </div>
+
+          
+
+<div class="container theme-showcase" role="main">
+
+<!-- <div id="myDiv" ng-class="'fade-out one'" ></div> -->
+
+
+
+
+
+<div id="myDiv" ng-style="mapChatPopBtn;" class="tooltippp" ng-disabled="!main.isLoggedIn" ng-click="toggleChat=!toggleChat" >      <!--TRIED DISABLING CHAT IF NOT LOGGED IN-->
+  <img ng-src="{{chatIconSrc}}" class="img-responsive"><span class="tooltippptext">Toggle Chat</span>
+</div> 
+
+
+ <div id="myDiv" ng-hide="hideQuickScroll" class="tooltippp" ng-style="mapQuickScroller"   ng-click="hideQuickScroll = !hideQuickScroll;main.scrollToTop()" >      <img ng-hide="hideQuickScroll" ng-src="{{upIconSrc}}" class="img-responsive "><span class="tooltippptext">To Top</span>
+</div> 
+
+
+
+  <div class="container container-fluid" ng-view style="background:#b22727"><!--used to hold our template called through ngRoute-->
+
+  </div>
+
+</div> <!-- /container -->
+<!-- <div drag-me>Hello</div> -->
+
+
+<table  >
+  <tr class="social-buttons navbar navbar-inverse navbar-fixed-bottom" class="footerDrawer" id="demo1">
+    <td>
+    <a href="https://www.ubuntu.com/" target="_blank"><i class="icon-ubuntu fa-ubuntu"></i> </a>
+    </td>  
+    <td>
+      <a href="https://git-scm.com/" target="_blank"><i class="icon-git fa-git"></i> </a>
+    </td>
+    <td>
+      <a href="https://angular-ui.github.io/bootstrap/" target="_blank"><i class="icon-bootstrap"></i> </a>
+    </td>
+    <td>
+      <a href="http://jsfiddle.net" target="_blank"><i class="fa fa-jsfiddle" aria-hidden="true"></i>  </a>
+    </td>
+    <td>
+      <a href="https://help.ubuntu.com/community/UsingTheTerminal" target="_blank"><i class="icon-shell"></i> </a>
+    </td>
+    <td>
+      <a href="# https://www.mongodb.com/" target="_blank"><i class="icon-mongodb fa-mongodb" ></i></a>
+    </td>
+    <td>
+      <a href="https://www.npmjs.com/" target="_blank"><i class="icon-npm fa-npm" ></i>  </a>
+    </td>
+    <td>
+      <a href="http://www.csstutorial.net/" target="_blank"><i class="icon-css3" ></i> </a>
+    </td>
+    <td>
+      <a href="https://angularjs.org/" target="_blank"><i class="icon-angular fa-ng" ></i> </a>
+    </td>
+    <td>
+      <a href="https://nodejs.org/en/" target="_blank"><i class="icon-nodejs" ></i></a>
+    </td>   
+  </tr>
+</table>
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

@@ -1,47 +1,35 @@
 angular.module("userControllers",['userServices'])
-//we won't actually have an 'ng-controller' anywhere in some HTML, routes.js will 
-//tell us the controller associated with a route
+
 .controller('regCtrl', function($http, $location, $timeout, User){
-// quick reminder: 'User' is the name of the factory we're making use of
 
 	var app = this;
-
-	//has to be this. rather than var regUser or else it won't wire up correctly
-	// var regCustomer = function(){
-	// this.regUser = function(regData){
+	
 	app.regUser = function(regData, valid){
 		app.loading = true;
-		app.errorMsg = false; //ensures message disappears when we have a post success scenario
-		//console.log('--- form data submitted ---');
-		//console.log(this.regData);		//outpout as JSON
-		//because of factory we will replace the next line with the code in scope written after it.
-		//$http.post('/api/users', app.regData).then(function(data){
+		app.errorMsg = false; //ensures existing message disappears fresh error scenario
+					
 		if(valid){
-			User.create(app.regData).then(function(data){
-			//console.log(data);
-			//console.log("data.success value is : " + data.data.success);
-			//console.log("data.message value is : " + data.data.message);
+			User.create(app.regData).then(function(data){	
 				if(data.data.success){
+					//lost scope of 'this' in here, hence use of var app
 					app.loading = false;				
-					//we can't use this in here because the if clause is inside a deeper scope, meaning we lose the 
-					//use of this.
-					//instead we will create our 'app' var above, and change previously existing instances of 'this',
-					//to our new 'app'. anywhere we see app, was formerly 'this', and would work fine only for we 
-					//decided we needed this message for the client
-					app.successMsg = data.data.message;
+									
+					 //app.successMsg = data.data.message;
+
+					//this is a test
+					app.errorMsg = data.data.message;
+
 					//just adding timeout for effect
 					$timeout(function(){
 						//acts as simple redirect
-						$location.path('/');
-					}, 2000);								
+						$location.path('/login');
+					}, 7000);								
 				}
 				else{
 					app.loading = false;
 					app.errorMsg = data.data.message;
 				}
-			});
-			//can't touch backend until such time as the form is valid
-			//if valid we would then do router.post in api.js(called from User.create)
+			});						
 		} else {
 			//error message created due to regForm.$valid's value in our registration
 			app.loading = false;
@@ -74,8 +62,7 @@ angular.module("userControllers",['userServices'])
 		app.emailInvalid = false;
 
 		User.checkEmail(app.regData).then(function(data){
-			// console.log(data);
-			// writing check rather than checking inside the conditional lost is time, be vigilant
+			
 			if(data.data.success){
 				app.checkingEmail = false;
 				app.emailInvalid = false;					
@@ -101,14 +88,14 @@ angular.module("userControllers",['userServices'])
 
     	//to get value from $observe which is inside 'link:', we must pass the value like so
     	$scope.doConfirm = function(values){
-    		// console.log(values);
-    		// console.log($scope.confirm);
+    		
     		// ^ now view our console, each value is logged as one input is updated
     		// ^ now we can implement a common 'confirm password' scenario
 
     		values.forEach(function(ele){
-    			console.log(ele);
-    			console.log($scope.confirm);
+    			//can't have these displayed to an outside user, password revealed
+    			// console.log(ele);
+    			// console.log($scope.confirm);
 
     			if($scope.confirm == ele){    				
     				$scope.confirmed = true;
@@ -159,7 +146,7 @@ angular.module("userControllers",['userServices'])
 	} else {
 		console.log($routeParams.token);
 		Auth.facebook($routeParams.token);	
-		$location.path('/');
+		$location.path('/forum');
 	}
 })
 
@@ -173,7 +160,7 @@ angular.module("userControllers",['userServices'])
 	} else {
 		console.log($routeParams.token);
 		Auth.twitter($routeParams.token);	
-		$location.path('/');
+		$location.path('/forum');
 	}
 })
 
@@ -186,12 +173,7 @@ angular.module("userControllers",['userServices'])
 	} else {
 		console.log($routeParams.token);
 		Auth.google($routeParams.token);	
-		$location.path('/');
+		$location.path('/forum');
 	}
 });
 	
-
-// //:8080/api/users
-// 	router.post('/users', function(req,res){
-// first 2 params mandatory, other 2 optional. according to documentation, all params are optional https://docs.angularjs.org/api/ng/service/$timeout
-//$timeout([fn], [delay], [invokeApply], [Pass]);

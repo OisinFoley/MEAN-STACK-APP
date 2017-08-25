@@ -2,7 +2,9 @@
 
 /* only injecting this one into our index (body ng-app etc..) as this module will feed/is linked to our other 
 angular modules ensure to add the routes.js as a dependency */
-angular.module('userApp',['appRoutes','userControllers','userServices','ngAnimate','mainCtrl','authServices'])
+// angular.module('userApp',['appRoutes','userControllers','userServices','ngAnimate','mainCtrl','authServices','feedController', 'feedServices','forumControllers','forumServices','imageController','imageServices','ngTagsInput','ngFileUpload'])
+angular.module('userApp',['appRoutes','userControllers','userServices','ngAnimate','mainCtrl','authServices','feedController', 'feedServices','forumControllers','forumServices','imageController','imageServices','ngFileUpload'])
+
 
 .config(function($httpProvider){
 	//console.log('testing main app config');	

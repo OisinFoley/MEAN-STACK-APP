@@ -1,6 +1,8 @@
 // app.js(linked back to index itself) references this as a dependency.
 var app = angular.module('appRoutes',['ngRoute'])
 
+//not all routes are accessible throuhg clicks, but they're not required to be either
+
 .config(function($routeProvider, $locationProvider){
 //on index page, hrefs needs to be '#/abcd' because of Angular, normally just '/' will suffice
 	$routeProvider
@@ -20,6 +22,60 @@ var app = angular.module('appRoutes',['ngRoute'])
 		templateUrl: 'app/views/pages/users/login.html',
 		authenticated: false
 	})
+	.when('/contentHome', { 
+		templateUrl: 'app/views/pages/contentHome.html',
+		authenticated: false
+	})
+	.when('/chatHolder', { 
+		templateUrl: 'app/views/pages/content/chatHolder.html',
+		//controller: 'feedCtrl',
+		//controllerAs: 'feed',
+		authenticated: false
+	})
+	.when('/feed', { 
+		templateUrl: 'app/views/pages/content/feed.html',
+		controller: 'feedCtrl',
+		controllerAs: 'feed',
+		authenticated: false
+	})
+	.when('/forum', { 
+		templateUrl: 'app/views/pages/content/forum.html',
+		controller: 'forumCtrl',
+		controllerAs: 'forum',
+		authenticated: true
+	})
+	.when('/thread/:_id', { 
+		templateUrl: 'app/views/pages/content/thread.html',
+		controller: 'forumCtrl',
+		controllerAs: 'forum',
+		authenticated: true
+	})
+	.when('/imageTest', { 
+		templateUrl: 'app/views/pages/content/imageTest.html',
+		controller: 'imageCtrl',
+		controllerAs: 'image',
+		authenticated: false
+	})
+	.when('/discover', { 
+		templateUrl: 'app/views/pages/content/discover.html',
+		controller: 'TypeAheadController',
+		authenticated: false
+	})
+	.when('/addInterests', { 
+		templateUrl: 'app/views/pages/addInterests.html',
+		authenticated: false
+	})
+	.when('/chat', { 
+		templateUrl: 'app/views/pages/chat.html',
+		authenticated: false
+	})
+	.when('/learn', { 
+		templateUrl: 'app/views/pages/content/learn.html',
+		controller: 'TypeAheadController',
+		controllerAs: 'typeahead',
+		authenticated: false		
+	})	
+	
 	.when('/logout', { 
 		templateUrl: 'app/views/pages/users/logout.html',
 		authenticated: true
@@ -72,31 +128,27 @@ var app = angular.module('appRoutes',['ngRoute'])
 	  requireBase: false
 	});
 
-	//console.log('testing our routes file');
+	
 });
 
 app.run(['$rootScope','Auth','$location',function($rootScope, Auth, $location) {
 
 
-$rootScope.$on('$routeChangeStart', function(event,next,current) {		
-		//console.log(Auth.isLoggedIn());
-		//console.log(next.$$route);
+$rootScope.$on('$routeChangeStart', function(event,next,current) {				
 		if(next.$$route.authenticated){ //if route requires authenticated to be true
 			if(!Auth.isLoggedIn()) {
-				//same as when wanting to submit a form but not be redirected
-				//change url manually to see its prevention to unwanted paths
+				
+				//without this, index renders but not it's nested view				
 				event.preventDefault();
-				//without next line it'll display just the index.html's content, even though by default we should 
-				//also have /home.html's view being displayed within the index
+				
 				$location.path('/');
 			}
-			//console.log('needs to be authenticated');
+			
 		} 	else if (!next.$$route.authenticated) {
 				if(Auth.isLoggedIn()) {				
 					event.preventDefault();				
-					$location.path('/profile');
-				}
-			//console.log('DOES NOT need to be authenticated');
+					$location.path('/feed');
+				}			
 		} 	else {
 				console.log('authenticaation does not matter here');
 		}	

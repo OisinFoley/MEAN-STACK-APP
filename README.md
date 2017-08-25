@@ -1,6 +1,6 @@
 # Creating a MEAN stack app, the aim being to eventually have it act as a sort of Film & TV social media site.
 
-#### README file 1.7.3 (an add-on to backend validation)
+#### README file 1.8 
 
 Once core work is done I will be concerned with:
 - Retrieving info pertaining to a series, show, act-or/ress etc using _API calls_
@@ -53,10 +53,20 @@ Added in previous commits (1.7.2)
 	* With these new changes, we're now checking if the form is valid before we leave our userCtrl, thus adding further frontend validation, as we don't have to wait until reaching the backend post action in order to find out whether there was an null error or not.
 	* Note: Username takes underscores, but not hyphens.
 
+Added in previous commits (1.7.3) (an add-on to backend validation)
+- Custom directives, initially for use with a confirm password field.
+- Check DB for username and email from client onblur(lostfocus).
+- Prettify inputs by using load animation onblur, need to throttle connection for full effect.
+
 ---
 
 Since last commit:
 
-- Custom directives, initially for use with a confirm password field.
-- Check DB for username and email from client onblur(lostfocus).
-- Prettify inputs by using load animation onblur, need to throttle connection for full effect.
+- Ongoing work on the header
+- Footer nav bar with animations created
+- Starting to incorporate a socket.io chat feature
+- Misc. UI work,
+- Adding additional schemas for content(posts, threads) , likes, tags etc.
+- Starting to add to the content-feed and discover sections
+- We're now using Bower to manage our packages
+

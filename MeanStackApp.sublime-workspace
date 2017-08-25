@@ -4,6 +4,194 @@
 		"selected_items":
 		[
 			[
+				"backg",
+				"background"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"comment",
+				"CommentData"
+			],
+			[
+				"arti",
+				"articleData"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"cast",
+				"castMember"
+			],
+			[
+				"sear",
+				"searchValue"
+			],
+			[
+				"image",
+				"imageRecord"
+			],
+			[
+				"moiv",
+				"movieInfo"
+			],
+			[
+				"contentnew",
+				"contentnewposts"
+			],
+			[
+				"post",
+				"postText"
+			],
+			[
+				"comm",
+				"CommentData"
+			],
+			[
+				"contentne",
+				"contentnew"
+			],
+			[
+				"posts",
+				"postsQuantity"
+			],
+			[
+				"content",
+				"contentnews"
+			],
+			[
+				"fade",
+				"fade-out"
+			],
+			[
+				"item",
+				"itemToSearch"
+			],
+			[
+				"conten",
+				"contentposts"
+			],
+			[
+				"like",
+				"likeData"
+			],
+			[
+				"user",
+				"userInfo"
+			],
+			[
+				"Post",
+				"PostersNames"
+			],
+			[
+				"contentposts",
+				"contentnewposts"
+			],
+			[
+				"start",
+				"startResize"
+			],
+			[
+				"chat",
+				"chatLoggedIn"
+			],
+			[
+				"our",
+				"ourData"
+			],
+			[
+				"pos",
+				"posts"
+			],
+			[
+				"commen",
+				"commentID"
+			],
+			[
+				"contentpos",
+				"contentPostNew"
+			],
+			[
+				"cont",
+				"Contentnew"
+			],
+			[
+				"togg",
+				"toggleChat"
+			],
+			[
+				"ima",
+				"imageFactory"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"thre",
+				"threadLikeData"
+			],
+			[
+				"threa",
+				"threadLikeData"
+			],
+			[
+				"db",
+				"dbParams"
+			],
+			[
+				"art",
+				"articleData"
+			],
+			[
+				"User",
+				"UserPostLikeSchema"
+			],
+			[
+				"thread",
+				"thread_id"
+			],
+			[
+				"conte",
+				"content_id"
+			],
+			[
+				"load",
+				"loadImage"
+			],
+			[
+				"date",
+				"dateAdded"
+			],
+			[
+				"tag",
+				"TagSchema"
+			],
+			[
+				"photo",
+				"PhotoSchema"
+			],
+			[
+				"Content",
+				"ContentSchema"
+			],
+			[
+				"timeStamp",
+				"timestamp"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
 				"confi",
 				"confirmPassword"
 			],
@@ -22,10 +210,6 @@
 			[
 				"first",
 				"firstPassword"
-			],
-			[
-				"user",
-				"username"
 			],
 			[
 				"usernam",
@@ -124,10 +308,6 @@
 				"body"
 			],
 			[
-				"User",
-				"UserSchema"
-			],
-			[
 				"body",
 				"bodyParser"
 			]
@@ -136,48 +316,21 @@
 	"buffers":
 	[
 		{
-			"file": "public/app/views/pages/users/register.html",
+			"file": "public/app/views/index.html",
 			"settings":
 			{
-				"buffer_size": 10304,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/routes/api.js",
-			"settings":
-			{
-				"buffer_size": 5862,
+				"buffer_size": 13475,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "public/app/services/userServices.js",
+			"file": "public/assets/css/myStyle.css",
 			"settings":
 			{
-				"buffer_size": 871,
+				"buffer_size": 12263,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/app/controllers/userCtrl.js",
-			"settings":
-			{
-				"buffer_size": 6891,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/user.js",
-			"settings":
-			{
-				"buffer_size": 3154,
-				"encoding": "UTF-8",
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -214,37 +367,95 @@
 	"expanded_folders":
 	[
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/Note",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/passport",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/routes",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views"
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css"
 	],
 	"file_history":
 	[
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/passport/passport.js",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/routes/api.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/routes.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/social/social.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/feedCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/forumCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/imageCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/mainCtrl.js",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/userCtrl.js",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/authServices.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/passport/passport.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/server.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/index.html",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/home.html",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/about.html",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/user.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/profile.html",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/app.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/feedServices.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/forumServices.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/imageServices.js",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/userServices.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/logout.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/js/client.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/js/socket.io.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/chatHolder.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/discover.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/feed.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/feedAlt.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/forum.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/imageTest.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/learn.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/thread.html",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/login.html",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/register.html",
-		"/home/ofoley/Downloads/authServices.js",
-		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/mainCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/home.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/routes.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/row.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/readthis.txt",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/js/readthis.txt",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/js/angular-route.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/js/classie.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/room.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/server.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/user.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/contentNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/myStyle.css",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/styles.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/index.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/app.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userContentLikeNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userPostLikeNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userPostLike.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/contentPostNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userContentLike.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/fadeOut.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/hearts.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/loadAnimation.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/ngTags.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/sidebar.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/style.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/style.scss",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/styleTypeA.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/css/app.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/contentPost.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/content.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/photo.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/photoUpload.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/lecture/app.js",
+		"/home/ofoley/Documents/backups/project ep 1-14 plus core content/MEAN Stack App/public/app/views/index.html",
+		"/home/ofoley/Downloads/resize-header-on-scroll/js/classie.js",
+		"/home/ofoley/Downloads/mongochat-master/server.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/node_modules/express/lib/express.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/tag.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/photoTag.js",
+		"/home/ofoley/Downloads/mongochat-master/index.html",
+		"/home/ofoley/Downloads/socketcluster-master/sample/server.js",
+		"/home/ofoley/Downloads/resize-header-on-scroll/index.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/contentHome.html",
+		"/home/ofoley/Downloads/resize-header-on-scroll/css/style.css",
+		"/home/ofoley/Downloads/resize-header-on-scroll/css/style.scss",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/social/social.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/about.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/profile.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/logout.html",
+		"/home/ofoley/Downloads/authServices.js",
 		"/home/ofoley/Desktop/testanimate/abc.html",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app (backend)/routes/api.js",
 		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/server/MongoOperations.js",
@@ -294,34 +505,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"blur",
-			"ng-blur=\"register.checkEmail(regData)\"",
-			"jquery",
-			"ensure uname,",
-			"}",
-			"user.findone",
-			"local",
-			"settoken",
-			"\t\t\n",
-			"URL",
-			"url",
-			"}\n",
-			"res.",
-			"\t\n",
-			"97170bfd22ae9af2272253b1a54a473a",
-			"httpP",
+			"fade",
+			"classie",
+			"login",
+			"modal",
+			"comme",
+			"like added",
+			"ng-show",
+			"sendingForm",
+			"img",
+			"loadme",
+			"load",
+			"sendingform",
+			"chatdiv",
+			"chatba",
+			"sendingfor",
+			"newthread",
+			"form",
+			"name",
+			"auto",
+			"errorms",
+			"label",
+			"direct",
+			"mapcha",
+			"init",
+			"forum",
+			"login",
+			"loginModalStyler",
+			"loginmoda",
+			"login",
+			"reguser",
+			"created",
+			"success",
+			"created",
+			"msg",
+			"valid email",
+			"User Reg",
+			"user reg",
+			"label",
+			"close",
+			"mapchat",
+			"togglechat",
+			"errormsg",
+			"posts",
+			"read",
+			"join",
+			"main-cha",
+			"conversation",
+			"chat",
 			"body",
-			"route",
-			"decoded",
-			"authtoken",
-			"<span class=\"glyphicon glyphicon-refresh glyphicon-spin\"></span>\t",
-			"db objec",
-			"ng",
-			"append",
-			"getalll",
-			"addmovie",
-			"crud",
-			"fetc"
+			"panel",
+			"conversation",
+			"server",
+			"connection",
+			"togglechat",
+			"user",
+			"uuid",
+			"people",
+			"is online",
+			"hello",
+			"is online",
+			"ng-hide",
+			"map",
+			".title",
+			"ng-hide",
+			"position",
+			"dbparams",
+			"posts",
+			".update",
+			"posts",
+			"update",
+			"article",
+			"comment",
+			";\n",
+			"middle",
+			"postlike",
+			"article",
+			"newthre",
+			"thread",
+			"home",
+			"body",
+			"table",
+			"img",
+			"container",
+			"home",
+			"font",
+			"\" ",
+			"push",
+			"right",
+			"repeat",
+			"target",
+			"img",
+			"foreach",
+			"ui-boot",
+			"2.5",
+			"src",
+			"append_to",
+			"scope.moo",
+			"activ",
+			"img",
+			"tabs",
+			"film / show",
+			"dynamic",
+			"login",
+			"filmsea",
+			"posts",
+			"see",
+			"thread",
+			"comment",
+			"star",
+			"like",
+			"update",
+			"some error",
+			"modified",
+			"read",
+			"thread",
+			"fadeloginmodal",
+			"location",
+			"fade",
+			"forum.",
+			"z-index:",
+			"style=\"z-index:5;position:relative\"",
+			"ng-show",
+			"ng-hide",
+			"ng-show",
+			"ng-hide",
+			"fade",
+			"quickscroll",
+			"fade"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -344,28 +655,29 @@
 			[
 				{
 					"buffer": 0,
-					"file": "public/app/views/pages/users/register.html",
+					"file": "public/app/views/index.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 10304,
+						"buffer_size": 13475,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								7837,
-								7837
+								11121,
+								11121
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 2472.0,
+						"translation.y": 2500.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -373,110 +685,24 @@
 				},
 				{
 					"buffer": 1,
-					"file": "app/routes/api.js",
+					"file": "public/assets/css/myStyle.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5862,
+						"buffer_size": 12263,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2763,
-								2763
+								509,
+								509
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 810.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/app/services/userServices.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 871,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								229,
-								229
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "public/app/controllers/userCtrl.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 6891,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4177,
-								4177
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1465.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/models/user.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3154,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1773,
-								1773
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -484,7 +710,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				}
 			]
@@ -492,7 +718,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 23.0
+		"height": 21.0
 	},
 	"input":
 	{
@@ -529,7 +755,7 @@
 	"project": "MeanStackApp.sublime-project",
 	"replace":
 	{
-		"height": 42.0
+		"height": 38.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -567,7 +793,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 181.0,
+	"side_bar_width": 187.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

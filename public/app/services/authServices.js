@@ -30,12 +30,12 @@ angular.module('authServices',[])
 	}
 
 	// Auth.twitter()
-	authFactory.twitter = function(token){
+	authFactory.twitter = function(token){		
 		AuthToken.setToken(token);
 	}
 
 	// Auth.google()
-	authFactory.google = function(token){
+	authFactory.google = function(token){		
 		AuthToken.setToken(token);
 	}
 
