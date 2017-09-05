@@ -1,0 +1,48 @@
+<div class="page-header">User Login	</div>
+
+<!-- routes.js has told us we can use the regCtrl controller -->
+<!-- then in userCtrl, you can see whe have a regUser property to access and then interact with -->
+<!-- for this particular scenario, 'this' acts as the dependency injector the way as $scope has in other examples -->
+<!-- we use 'register.' because of the 'controllerAs' alias in our route.js -->
+<form ng-submit="main.doLogin(loginData);">	
+	<label>Username:</label>
+	<input class="form-control" type="text" name="username" placeholder="please enter a name" ng-model="main.loginData.username">
+	<br>
+	<label>Password:</label>
+	<input class="form-control" type="text" name="password" placeholder="please enter a password" ng-model="main.loginData.password">
+	<br>
+	<button class="btn btn-primary" type="submit">Login</button>&nbsp
+	<button type="button" class="btn btn-success" ng-click="main.facebook();">Facebook</button>
+	<button type="button" class="btn btn-warning" ng-click="main.twitter();">Twitter</button>
+	<button type="button" class="btn btn-info btn-lg" ng-click="main.google();">Google</button>
+</form>
+
+<h6>User Login Page </h6>
+<br><br>
+
+<!-- <span class="glyphicon glyphicon-repeat fast-right-spinner"></span> -->
+
+<div class="jumbotron text-center" ng-show="main.loading">
+	<span class="glyphicon glyphicon-refresh glyphicon-spin"></span>	
+	<!-- <span class="glyphicon glyphicon-repeat spinner"></span>	 -->
+	<p>Loading....</p>
+</div>
+
+<div class="row show-hide-message" ng-show="main.successMsg">
+	<div class="alert alert-success">Success Message: {{	main.successMsg }}</div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="main.errorMsg">
+	<div class="alert alert-danger">Error Message: {{ main.errorMsg }}</div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="facebook.errorMsg">
+	<div class="alert alert-danger">Facebook Error Message: f {{ facebook.errorMsg }}</div>
+</div>
+<div class="row show-hide-message" ng-show="twitter.errorMsg">
+	<div class="alert alert-danger">Twitter Error Message: t {{ twitter.errorMsg }}</div>
+</div>
+<br>
+<div class="row show-hide-message" ng-show="google.errorMsg">
+	<div class="alert alert-danger">Facebook Error Message: g {{ google.errorMsg }}</div>
+</div>
