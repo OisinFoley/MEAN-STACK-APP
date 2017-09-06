@@ -1,6 +1,6 @@
 # Creating a MEAN stack app, the aim being to act as a Film & TV social media site.
 
-#### README file 1.8.5
+#### README file 1.8.6
 
 DEMO:
 
@@ -72,4 +72,4 @@ Added in previous commits (1.7.3) (an add-on to backend validation)
 
 Since last commit:
 
-- Deployed to Heroku
+- Abandoned 2-tier responsive navbar in favour of mobile friendly(hamburger on resize) design
