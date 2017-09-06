@@ -1,0 +1,953 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"backg",
+				"background"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"comment",
+				"CommentData"
+			],
+			[
+				"arti",
+				"articleData"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"cast",
+				"castMember"
+			],
+			[
+				"sear",
+				"searchValue"
+			],
+			[
+				"image",
+				"imageRecord"
+			],
+			[
+				"moiv",
+				"movieInfo"
+			],
+			[
+				"contentnew",
+				"contentnewposts"
+			],
+			[
+				"post",
+				"postText"
+			],
+			[
+				"comm",
+				"CommentData"
+			],
+			[
+				"contentne",
+				"contentnew"
+			],
+			[
+				"posts",
+				"postsQuantity"
+			],
+			[
+				"content",
+				"contentnews"
+			],
+			[
+				"fade",
+				"fade-out"
+			],
+			[
+				"item",
+				"itemToSearch"
+			],
+			[
+				"conten",
+				"contentposts"
+			],
+			[
+				"like",
+				"likeData"
+			],
+			[
+				"user",
+				"userInfo"
+			],
+			[
+				"Post",
+				"PostersNames"
+			],
+			[
+				"contentposts",
+				"contentnewposts"
+			],
+			[
+				"start",
+				"startResize"
+			],
+			[
+				"chat",
+				"chatLoggedIn"
+			],
+			[
+				"our",
+				"ourData"
+			],
+			[
+				"pos",
+				"posts"
+			],
+			[
+				"commen",
+				"commentID"
+			],
+			[
+				"contentpos",
+				"contentPostNew"
+			],
+			[
+				"cont",
+				"Contentnew"
+			],
+			[
+				"togg",
+				"toggleChat"
+			],
+			[
+				"ima",
+				"imageFactory"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"thre",
+				"threadLikeData"
+			],
+			[
+				"threa",
+				"threadLikeData"
+			],
+			[
+				"db",
+				"dbParams"
+			],
+			[
+				"art",
+				"articleData"
+			],
+			[
+				"User",
+				"UserPostLikeSchema"
+			],
+			[
+				"thread",
+				"thread_id"
+			],
+			[
+				"conte",
+				"content_id"
+			],
+			[
+				"load",
+				"loadImage"
+			],
+			[
+				"date",
+				"dateAdded"
+			],
+			[
+				"tag",
+				"TagSchema"
+			],
+			[
+				"photo",
+				"PhotoSchema"
+			],
+			[
+				"Content",
+				"ContentSchema"
+			],
+			[
+				"timeStamp",
+				"timestamp"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"confi",
+				"confirmPassword"
+			],
+			[
+				"conf",
+				"confirmPassword"
+			],
+			[
+				"matc",
+				"matches"
+			],
+			[
+				"do",
+				"doConfirm"
+			],
+			[
+				"first",
+				"firstPassword"
+			],
+			[
+				"usernam",
+				"usernameInvalid"
+			],
+			[
+				"ema",
+				"emailMsg"
+			],
+			[
+				"che",
+				"checkEmail"
+			],
+			[
+				"reg",
+				"regForm"
+			],
+			[
+				"character",
+				"characters"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"name",
+				"nameValidator"
+			],
+			[
+				"valid",
+				"validate"
+			],
+			[
+				"gogl",
+				"google"
+			],
+			[
+				"pro",
+				"profile"
+			],
+			[
+				"lo",
+				"location"
+			],
+			[
+				"is",
+				"isLoggedIn"
+			],
+			[
+				"aut",
+				"authTokenFactory"
+			],
+			[
+				"au",
+				"authTokenFactory"
+			],
+			[
+				"auth",
+				"AuthToken"
+			],
+			[
+				"Auth",
+				"AuthToken"
+			],
+			[
+				"get",
+				"getToken"
+			],
+			[
+				"Aut",
+				"AuthToken"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"authT",
+				"AuthToken"
+			],
+			[
+				"log",
+				"loginData"
+			],
+			[
+				"succ",
+				"successMsg"
+			],
+			[
+				"use",
+				"username"
+			],
+			[
+				"bod",
+				"body"
+			],
+			[
+				"body",
+				"bodyParser"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/models/content.js",
+			"settings":
+			{
+				"buffer_size": 537,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "angular.module(\"forumControllers\",['forumServices'])\n\n.controller('forumCtrl', function($http, $location, $timeout, Content, $scope, Auth, $rootScope){\n\n\tvar app = this;\n\n\tapp.sendingForm = false;\n\n\n\t// $rootScope.$on('$routeChangeStart', function() {\n\t\t//calls the service upon initial load\n\t\tif(Auth.isLoggedIn()) {\n\t\t\t//console.log(\"SUCCESS: user is logged in\");\n\t\t\tapp.isLoggedIn = true;\n\t\t\t//if user is logged in, we want to get their info, this verificiation is done back in authServices.js\n\t\t\tAuth.getUser().then(function(data){\n\t\t\t\t //console.log(\"data.data.id is %s\",data.data.id);\n\t\t\t\t app.uuid = data.data.uuid;\n\t\t\t\tapp.id = data.data.id;\n\t\t\t\tapp.username = data.data.username; //now accessible at front-end\n\t\t\t\tapp.useremail = data.data.email; //now accessible at front-end\n\t\t\t\t//app.loadMe = true;\n\t\t\t});\n\t\t}\n\t\telse {\n\t\t\tconsole.log(\"Reminder: user is NOT logged in\");\n\t\t\t//app.username = {};\n\t\t\t// app.username = false;\n\t\t\tapp.username = ''; //neither '{}' nor 'false' work as hoped. they're literally copied.\n\t\t\tapp.loadMe = true;\n\t\t}\n\t\t/*when we had the above if/else statement, but without the $rootscope.$on function, we would've had\n\t\tto refresh the page each time to check if user was loggin, now they update with each route/view change\n\t\t, as the code implies\t*/\n\n\t\t//if($location.hash() == '_=_') $location.hash(null);\n\t//});\n\n\n\n\n\n\tapp.newThread = function(ThreadData, valid){\n\t\tapp.sendingForm = true;\n\t\tconsole.log(\" sending new thread form\");\t\t\n\t\tapp.errorMsg = false; //ensures message disappears when we have a post success scenario\n\t\t\n\t\tif(valid){\t\t\t\t\t\t\n\t\t\tContent.newThread(app.ThreadData).then(function(data){\n\t\t\t\tif(data.data.success){\n\t\t\t\t\tapp.successMsg = data.data.message;\n\t\t\t\t\tconsole.log(\"success the insert happened\");\n\t\t\t\t\tapp.sendingForm = false;\n\t\t\t\t\t$timeout(function(){\n\t\t\t\t\t\t//acts as simple redirect\n\t\t\t\t\t\t$location.path('/forum');\n\t\t\t\t\t}, 2000);\t\t\t\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\tapp.sendingForm = false;\n\t\t\t\t\tconsole.log(\"fail no inserts happened\");\n\t\t\t\t\tapp.errorMsg = data.data.message;\n\t\t\t\t}\n\t\t\t});\n\t\t} else {\n\t\t\t//error message created due to regForm.$valid's value in our registration\n\t\t\tapp.sendingForm = false;\n\t\t\tapp.errorMsg = 'Please ensure title is provided';\n\t\t}\t\n\t};\n\n\t//form submit\n\tapp.newComment = function(CommentData, valid){\n\t\t\n\t\tapp.sendingForm = true;\n\t\tapp.errorMsg = false; \n\n\t\t//grabbing id of the thread we're commenting on\n\t\tapp.CommentData.content_uuid = $location.path().substr(8);\t\t\n\t\t//value gathered from the above 'Auth.isLoggedIn()' callback\n\t\tapp.CommentData.userid = app.id;\t\t\n\t\tapp.CommentData.user_uuid = app.uuid;\t\t\n\n\t\tconsole.log(\"commentdata total is : %s\",JSON.stringify(app.CommentData));\n\t\t\t\t\t\n\t\tif(valid){\t\t\n\t\t//call similarly named factory function, passing the form data\t\t\t\t\n\t\t//alert(\"hi\");\n\t\t\tContent.newComment(app.CommentData).then(function(data){\n\t\t\t\tif(data.data.success){\n\t\t\t\t\tapp.successMsg = data.data.message;\t\t\n\t\t\t\t\t// not working, don't know why. also tried the controller alias of forum. and $scope\n\t\t\t\t\tapp.sendingForm = false;\n\t\t\t\t\tconsole.log(\"success\");\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\t\n\t\t\t\t\tconsole.log(\"failed\");\n\t\t\t\t\tapp.sendingForm = false;\n\t\t\t\t\tapp.errorMsg = data.data.message;\n\t\t\t\t}\n\t\t\t});\n\t\t} else {\n\t\t\t//error message created due to regForm.$valid's value in our registration\n\t\t\tapp.sendingForm = false;\n\t\t\tapp.errorMsg = 'Please ensure comment is provided';\n\t\t}\t\n\t};\n\t\t\n\tapp.readThreads = function(){\n\t\tapp.loading = true;\n\t\tconsole.log(\"IN CONTROLLER, BEFORE READTHREADS()\");\t\t\t\t\t\n\t\tContent.readThreads().then(function(data){\n\t\t\t\tif(data.data.success){\n\t\t\t\t\tapp.successMsg = data.data.message;\n\t\t\t\t\tconsole.log(\"success %s\", data.data.message);\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\tapp.threads = data.data.content;\n\n\t\t\t\t\t//checking individual properties\n\t\t\t\t\t// console.log(\"DDDDDDDDDDD : %s\", JSON.stringify(data.content.title));\n\t\t\t\t\t//console.log(\"DDDDDDDDDDD : %s\", JSON.stringify(data.data.content[2].postCount));\n\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\t//app.loading = false;\n\t\t\t\t\tconsole.log(\"failure\");\n\t\t\t\t\tapp.errorMsg = data.data.message;\n\t\t\t\t}\t\t\t\n\t\t}); \t\t\n\t};\n\n\n\tapp.openThread = function(thread){\t\t\n\t\t$scope.chosenThread = thread._id;\t\t\n\t\t//will still use this ctrl after redirect\n\t\t$location.path('/thread/'+thread.uuid);\n\t};\n\n\tapp.registerThreadLike = function(){\t\t\n\t\tvar threadLikeData = {\n\t\t\tcontent_uuid : $location.path().substr(8),\n\t\t\tuser_uuid : app.uuid\n\n\t\t};\n\t\tconsole.log(\"a %s\",threadLikeData.content_uuid);\n\t\t\n\n\t\tContent.registerThreadLike(threadLikeData).then(function(data){\n\t\t\tif(data.data.success){\n\t\t\t\tapp.successMsg = data.data.message;\t\t\t\t\t\n\t\t\t\tconsole.log(\"success: like registered to thread\");\n\t\t\t\t\n\t\t\t}\n\t\t\telse{\n\t\t\t\t\n\t\t\t\tconsole.log(\"failure:the like wasn't registered to the thread\");\n\t\t\t\tapp.errorMsg = data.data.message;\n\t\t\t}\n\t\t});\n\t}\n\n\n\tapp.registerCommentLike = function(likeData){\t\t\n\t\t//Reusing api object from 'ngrepeat: post' as it contains 2 attribues we need from the post/comment,\n\t\t//content_id(id for the thread), and contentPost_id(id for the comment, written as _id)\n\t\t//user_id is previously to the user who made the comment, but now we set the user_id to be the user \n\t\t//who is logged in so we can register his like efficiently\n\t\t\t\n\t\tlikeData.user_uuid = app.uuid;\n\t\tlikeData.thread_uuid = $location.path().substr(8);\t\t\t\t\n\t\t\n\t\tContent.registerCommentLike(likeData).then(function(data){\n\t\t\t\tif(data.data.success){\n\t\t\t\t\tapp.successMsg = data.data.message;\t\t\t\t\t\n\t\t\t\t\tconsole.log(\"success: like registered to comment\");\n\t\t\t\t\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\t//app.loading = false;\n\t\t\t\t\tconsole.log(\"failure:the like wasn't registered\");\n\t\t\t\t\tapp.errorMsg = data.data.message;\n\t\t\t\t}\n\t\t\t});\n\t\t}; \n\n\t\n\n\tapp.loadPosts = function(){\n\t\tapp.loading = true;\t\t\t\n\t\tconsole.log('Amended current route name: ' + $location.path().substr(8));\n\t\tconsole.log(\"IN CONTROLLER, BEFORE READPOSTS()\");\t\t\t\t\t\n\t\tvar thread_id = {};\n\n\t\tthread_id.uuid = $location.path().substr(8);\n\t\t\n\n\t\tContent.loadPosts(thread_id).then(function(data){\n\t\t//Content.loadPosts($location.path().substr(8)).then(function(data){\n\t\t\t\tif(data.data.success){\n\n\t\t\t\t\t$scope.threadTitle = data.data.ourData.title;\t\t\t\t\t\n\t\t\t\t\tconsole.log(JSON.stringify(data.data));\t\t\t\t\t\n\t\t\t\t\t// console.log(JSON.stringify($scope.threadResults.PostersNames));\n\t\t\t\t\t\n\t\t\t\t\tapp.posts = data.data.ourData.posts;\n\t\t\t\t\tapp.threadFavCount = data.data.ourData.favourites.length;\n\t\t\t\t\tconsole.log(JSON.stringify(data.data.ourData[0]));\n\t\t\t\t\t//alert(JSON.stringify(data.data.ourData._id));\n\t\t\t\t\t\n\t\t\t\t}\n\t\t\t\telse{\n\t\t\t\t\t//app.loading = false;\n\t\t\t\t\tconsole.log(\"failure\");\n\t\t\t\t\tapp.errorMsg = data.data.message;\n\t\t\t\t}\t\t\t\n\t\t}); \t\t\n\t};\n\t\n});\n",
+			"file": "public/app/controllers/forumCtrl.js",
+			"file_size": 6565,
+			"file_write_time": 131481673240000000,
+			"settings":
+			{
+				"buffer_size": 6565,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "angular.module('forumServices',[])\n.factory('Content', function($http){\n\tvar forumFactory = {};\n\n//working\n\t// Content.newThread\n\tforumFactory.newThread = function(ThreadData){\n\t\treturn $http.post('/api/addthread', ThreadData);\n\t}\n\n//working\n\t//Content.readThreads()\n\tforumFactory.readThreads = function(){\n\t\tconsole.log(\"IN SERVICES, BEFORE /API/READTHREADS()\");\t\t\t\t\t\n\t\treturn $http.post('/api/readthreads');\n\t}\n\n//working\n\t//Content.loadPosts()\n\tforumFactory.loadPosts = function(id){\t\n\tconsole.log(\"content factory -> loadPosts function\");\t\n\t\treturn $http.post('/api/loadposts', id);\n\t}\n\n//working\n\t//Content.newComment()\n\tforumFactory.newComment = function(commentData){\n\t\tconsole.log(\"comment post factory\");\n\t\treturn $http.post('/api/writepost', commentData);\n\t}\n\n//working\n\t// Content.registerLike(likeData)\n\tforumFactory.registerCommentLike = function(likeData){\n\t\tconsole.log(\"content factory: registerLike()\");\n\t\treturn $http.post('/api/writecommentlike', likeData);\t\n\t}\n\n//working\n\t//Content.registerThreadLike(threadLikeData)\n\tforumFactory.registerThreadLike = function(threadLikeData){\n\t\treturn $http.post('/api/writethreadlike', threadLikeData);\t\t\n\t}\n\t\n\n\treturn forumFactory;\n})",
+			"file": "public/app/services/forumServices.js",
+			"file_size": 1192,
+			"file_write_time": 131481667120000000,
+			"settings":
+			{
+				"buffer_size": 1192,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/routes/api.js",
+			"settings":
+			{
+				"buffer_size": 20384,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "server.js",
+			"settings":
+			{
+				"buffer_size": 15328,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var mongoose = require('mongoose');\nvar Schema = mongoose.Schema;\nvar titlize = require('mongoose-title-case');\nvar ContentPostNew    = require('../models/contentNew');\n\n\nvar ContentNewSchema = new Schema({\n  title: {type:String, required:true}, \n  isThread : {type:Boolean, required:true},\n  //with this we can use filtering to display active threads and posts from the last 24 hours\n  dateModified: {type:Date, required:true },    \n  dateAdded: {type:Date, required:true },\n  uuid: {type:String, required:true} , \n  url: {type:String, required:false},\n  //posts:{[], required:false}\n  //posts: [ContentPostSchema]\n  posts: {type:[ContentPostNew], required:false},\n  favourites: {type:[ContentPostNew], required:false}\n\t  \n});\n\n\n\nContentNewSchema.plugin(titlize, {\n  paths: [ 'title' ]  \n});\n\nmodule.exports = mongoose.model('ContentNew', ContentNewSchema);",
+			"file": "app/models/contentNew.js",
+			"file_size": 858,
+			"file_write_time": 131479153980000000,
+			"settings":
+			{
+				"buffer_size": 858,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 416.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/ofoley/CodingProjects/MEANStackApp/Heroku deployment/MEAN Stack App"
+	],
+	"file_history":
+	[
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/app/models/contentNew.js",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/public/assets/css/myStyle.css",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/app/routes/api.js",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/public/app/views/index.html",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/app/passport/passport.js",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/public/app/routes.js",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/public/app/services/userServices.js",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/public/app/services/authServices.js",
+		"/home/ofoley/CodingProjects/MEANStackApp/MEAN Stack App/server.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/passport/passport.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/routes/api.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/feedCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/forumCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/imageCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/mainCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/controllers/userCtrl.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/authServices.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/feedServices.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/forumServices.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/imageServices.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/services/userServices.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/js/client.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/js/socket.io.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/chatHolder.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/discover.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/feed.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/feedAlt.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/forum.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/imageTest.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/learn.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/thread.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/login.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/register.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/home.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/routes.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/row.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/readthis.txt",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/js/readthis.txt",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/js/angular-route.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/js/classie.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/room.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/server.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/user.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/contentNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/myStyle.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/styles.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/index.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/app.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userContentLikeNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userPostLikeNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userPostLike.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/contentPostNew.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/userContentLike.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/fadeOut.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/hearts.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/loadAnimation.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/ngTags.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/sidebar.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/style.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/style.scss",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/assets/css/styleTypeA.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/css/app.css",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/contentPost.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/content.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/photo.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/content/photoUpload.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/lecture/app.js",
+		"/home/ofoley/Documents/backups/project ep 1-14 plus core content/MEAN Stack App/public/app/views/index.html",
+		"/home/ofoley/Downloads/resize-header-on-scroll/js/classie.js",
+		"/home/ofoley/Downloads/mongochat-master/server.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/node_modules/express/lib/express.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/tag.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app/models/photoTag.js",
+		"/home/ofoley/Downloads/mongochat-master/index.html",
+		"/home/ofoley/Downloads/socketcluster-master/sample/server.js",
+		"/home/ofoley/Downloads/resize-header-on-scroll/index.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/contentHome.html",
+		"/home/ofoley/Downloads/resize-header-on-scroll/css/style.css",
+		"/home/ofoley/Downloads/resize-header-on-scroll/css/style.scss",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/social/social.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/about.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/profile.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/public/app/views/pages/users/logout.html",
+		"/home/ofoley/Downloads/authServices.js",
+		"/home/ofoley/Desktop/testanimate/abc.html",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/app (backend)/routes/api.js",
+		"/home/ofoley/CodingProjects/fbLoginToken - Copy/MEAN Stack App/server/MongoOperations.js",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/public/app/folder/index.html",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/public/app/views",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken - Copy/meantutorial - from start/app/models/user.js",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken/meantutorial/package.json",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken/meantutorial/server.js",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken/meantutorial/app/passport/passport.js",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken/meantutorial/public/server.js",
+		"/C/Users/oisin_000/Desktop/test/fbLoginToken/meantutorial/public/package.json",
+		"/C/Users/oisin_000/Desktop/noVSRecreate/package.json",
+		"/C/Users/oisin_000/Desktop/HTML scraping node/app.js",
+		"/C/Users/oisin_000/Desktop/2017 PRJ400/BasicNodeApp/indexnew.html",
+		"/C/Users/oisin_000/Desktop/test/Modal/index.html",
+		"/C/Users/oisin_000/Desktop/2017 PRJ400/BasicNodeApp/localStyles.css",
+		"/C/Users/oisin_000/Desktop/2017 PRJ400/BasicNodeApp/indexnew.html~",
+		"/C/Users/oisin_000/Desktop/2017 PRJ400/BasicNodeApp/LatestNews.html",
+		"/C/Users/oisin_000/Desktop/Socket.io_samples/Sample2_working/index.js",
+		"/C/Users/oisin_000/Desktop/Socket.io_samples/Sample2_working/package.json",
+		"/C/Users/oisin_000/Desktop/Socket.io_samples/Sample2_working/index.html",
+		"/C/Users/oisin_000/Desktop/Socket.io samples/dependencies.json",
+		"/C/Users/oisin_000/Desktop/logic of node files/sample files I wrote/fileStream/creating with Angular/index.html",
+		"/C/Users/oisin_000/Desktop/logic of node files/sample files I wrote/fileStream/creating with Angular/controller.js",
+		"/C/Users/oisin_000/Desktop/sampleAngularApi/NodeMovieList/NodeMovieList/server.js",
+		"/C/Users/oisin_000/Desktop/sampleAngularApi/NodeMovieList/NodeMovieList/public/scripts/controller.js",
+		"/C/Users/oisin_000/Desktop/sampleAngularApi/NodeMovieList/NodeMovieList/public/scripts/movies.js",
+		"/C/Users/oisin_000/Desktop/sampleAngularApi/NodeMovieList/NodeMovieList/server/MongoOperations.js",
+		"/C/Users/oisin_000/Desktop/sampleAngularApi/NodeMovieList/NodeMovieList/views/MoviesList.html",
+		"/C/Users/oisin_000/Desktop/noVSRecreate/views/MoviesList.html",
+		"/C/Users/oisin_000/Desktop/noVSRecreate/server.js",
+		"/C/Users/oisin_000/Desktop/noVSRecreate/README.md"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"/me",
+			"util",
+			"fade",
+			"classie",
+			"login",
+			"modal",
+			"comme",
+			"like added",
+			"ng-show",
+			"sendingForm",
+			"img",
+			"loadme",
+			"load",
+			"sendingform",
+			"chatdiv",
+			"chatba",
+			"sendingfor",
+			"newthread",
+			"form",
+			"name",
+			"auto",
+			"errorms",
+			"label",
+			"direct",
+			"mapcha",
+			"init",
+			"forum",
+			"login",
+			"loginModalStyler",
+			"loginmoda",
+			"login",
+			"reguser",
+			"created",
+			"success",
+			"created",
+			"msg",
+			"valid email",
+			"User Reg",
+			"user reg",
+			"label",
+			"close",
+			"mapchat",
+			"togglechat",
+			"errormsg",
+			"posts",
+			"read",
+			"join",
+			"main-cha",
+			"conversation",
+			"chat",
+			"body",
+			"panel",
+			"conversation",
+			"server",
+			"connection",
+			"togglechat",
+			"user",
+			"uuid",
+			"people",
+			"is online",
+			"hello",
+			"is online",
+			"ng-hide",
+			"map",
+			".title",
+			"ng-hide",
+			"position",
+			"dbparams",
+			"posts",
+			".update",
+			"posts",
+			"update",
+			"article",
+			"comment",
+			";\n",
+			"middle",
+			"postlike",
+			"article",
+			"newthre",
+			"thread",
+			"home",
+			"body",
+			"table",
+			"img",
+			"container",
+			"home",
+			"font",
+			"\" ",
+			"push",
+			"right",
+			"repeat",
+			"target",
+			"img",
+			"foreach",
+			"ui-boot",
+			"2.5",
+			"src",
+			"append_to",
+			"scope.moo",
+			"activ",
+			"img",
+			"tabs",
+			"film / show",
+			"dynamic",
+			"login",
+			"filmsea",
+			"posts",
+			"see",
+			"thread",
+			"comment",
+			"star",
+			"like",
+			"update",
+			"some error",
+			"modified",
+			"read",
+			"thread",
+			"fadeloginmodal",
+			"location",
+			"fade",
+			"forum.",
+			"z-index:",
+			"style=\"z-index:5;position:relative\"",
+			"ng-show",
+			"ng-hide",
+			"ng-show",
+			"ng-hide",
+			"fade"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/models/content.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/app/controllers/forumCtrl.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6565,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1592,
+								1592
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 351.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/app/services/forumServices.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1192,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								89,
+								89
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/routes/api.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 20384,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11369,
+								11369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 4718.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "server.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15328,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2980,
+								2980
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1014.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/contentNew.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 858,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								669,
+								669
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 21.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "MeanStackApp.sublime-project",
+	"replace":
+	{
+		"height": 38.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 187.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

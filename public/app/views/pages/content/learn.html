@@ -1,0 +1,138 @@
+<title>Angular TypeAhead</title>
+
+   <div class="container btn btn-info" ng-init="loadpics()" >
+
+
+  	<h1>TypeAhead Using AngularJS</h1>
+  	<typeahead  items="items" prompt="Start typing a search term" ng-style="filmSearchStyle" title="title" subtitle="abbreviation" model="name" on-select="onItemSelected($viewValue)" />
+  	<!-- film uses title, v show uses name to identify objects, until we can write an expression to take both, should have 2 radio buttons,
+  	depending on which is active, one typeahead will be disabled, both cater for different viewing type: tv show or film -->  	
+   </div>
+   
+   <script type="text/ng-template" id="templateurl.html">
+    <input type="text" ng-model="model" placeholder="{{prompt}}" ng-keydown="selected=false"/><br/> 
+    
+    <div class="suggestions" style="overflow: scroll;height: 400px" ng-hide="!model.length || selected">
+
+  	  <div class="suggestion" ng-repeat="item in items | filter:model  track by $index" ng-click="handleSelection(item[title])" style="cursor:pointer;" ng-class="{active:isCurrent($index)}" ng-mouseenter="setCurrent($index)">
+    		<p class="title">{{item[title]}}</p>
+    		<p class="subtitle">{{item[year]}}</p>
+  	  </div>
+    </div>
+   </script> 
+
+  <div style="margin-top:200px">
+     <div style="height: 905px">
+      <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+        <a ng-href="https://image.tmdb.org/t/p/w500{{slide.image}}" target="_blank">
+          <img ng-src="https://image.tmdb.org/t/p/w500{{slide.image}}" style="margin:auto;">
+          <div class="carousel-caption">
+            <h4>Slide {{slide.id}}</h4>
+            <p>{{slide.text}}</p>
+          </div>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-md-6">   
+      <button type="button" class="btn btn-info" ng-click="addSlide()">Add Slide</button>         
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="noWrapSlides">
+            Disable Slide Looping
+          </label>
+        </div>
+      </div>    
+    </div>  -->
+  </div>
+     
+<uib-tabset style="height:55vh;background:orange;" active="active">
+    <uib-tab index="0">
+      <uib-tab-heading>
+        <i class="fa fa-picture-o" aria-hidden="true"></i>Movie info        
+      </uib-tab-heading>
+      <div style="font-family: Georgia, Times, 'Times New Roman', serif;font-size: 2.2em;color:yellow;" ng-repeat="item in movieInfo">
+        <div class="col-lg-3 col-md-4 col-sm-4">
+          <img ng-class='img-rounded ' style="left:5%;padding:10px;height: 50vh;width:20vw"  ng-src="https://image.tmdb.org/t/p/w500{{item.poster_path}}"></img>
+        </div>
+        <div ng-class="col-lg-1 col-lg-offset-2">
+          aBCDEFHFJ   
+          score: {{item.vote_average}}<br>
+          title: {{item.original_title}}<br>
+          overview: {{item.overview}}<br>
+          released: {{item.release_date}}<br>
+          language: {{item.original_language}}<br>
+        </div>
+      </div>
+    </uib-tab>
+    <uib-tab index="1">
+      <uib-tab-heading>
+        <i class="fa fa-picture-o" aria-hidden="true"></i>Actors / Actresses
+    </uib-tab-heading>
+      <div style="overflow: scroll;height: 75vh">
+        <table style="width:100%">
+          <tr ng-repeat="person in castList" >      
+          <div class="container">
+            <td>                        
+              <img class="img-responsive" style="padding:15px;height: 25vh;width:10vw" ng-src="https://image.tmdb.org/t/p/w500{{person.profile_path}}"/>
+            </td>
+            <td>
+              <div class="col-lg-4" style="font-size: 2.2em">
+                {{person.character}} <br/> 
+                <!-- <a href="" ng-click="getFilmography({{person.id}})"> {{person.name}}   </a> -->
+                <a href="" ng-click="getFilmography(person.id)"> {{person.name}}   </a>
+
+              </div>                  
+            </td>
+
+          </div>
+            
+          </tr>
+        </table>      
+      </div>      
+    </uib-tab>
+    <uib-tab index="2">
+      <uib-tab-heading>
+        <i class="fa fa-picture-o" aria-hidden="true"></i>Actor Filmography
+    </uib-tab-heading>
+      <div style="overflow: scroll;height: 75vh">
+        <table style="width:100%">
+          <tr ng-repeat="film in filmography" >      
+          <div class="container">
+            <td>          
+              <!-- <img class="img-rounded" style="left:5%;padding:30px;height: 22vh;width:10vw" ng-src="https://image.tmdb.org/t/p/w500{{person.profile_path}}"/> -->
+              <img class="img-responsive" style="padding:15px;height: 25vh;width:10vw" ng-src="https://image.tmdb.org/t/p/w500{{film.poster_path}}"/>
+            </td>
+            <td>
+              <div class="col-lg-4" style="font-size: 2.2em">
+                {{person.character}} <br/> 
+                <!-- <a href="" ng-click="getFilmography({{person.id}})"> {{person.name}}   </a> -->
+                <a href="" ng-click="active = 0"> {{film.title}}   </a>
+
+              </div>                  
+            </td>
+
+          </div>
+            
+          </tr>
+        </table>      
+      </div>      
+</uib-tabset>
+
+
+  <hr />
+
+
+  <hr />
+
+
+  
+  
+
+    
+
+
+

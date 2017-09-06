@@ -1,0 +1,122 @@
+<div id="divfeed" style="margin-top: 100px">
+	
+</div>
+
+
+<!-- ALTERNATE FEED LAYOUT THAT IS MORE COMPACT AND RESEMBLES CARDS -->
+
+<div ng-init="loadFeedItems()"></div>
+
+
+<!-- <i class="fa fa-heart" aria-hidden="true"></i>
+	<i class="fa fa-user"></i> -->
+
+------------------- 
+<div id="ContainerNewPosts" class="container container-fluid">
+	<div ng-repeat="article in feed.mytestitems" class="row">		
+
+		<div class="col-lg-9 red" >
+			<a href="{{article.url}}" target="_blank"><image class="col-lg-6" ng-src="{{article.urlToImage}}"></image></a>
+			<table>
+				<tr>
+					<th><h2>{{article.title}}</h2></th>
+				</tr>
+				<tr>
+					<th><h4>{{article.description}}<h4></th>
+				</tr>
+				<tr>
+					<th>
+						
+					  <form name="likeForm" ng-submit="feed.registerArticleLike(article);" >                    
+					  
+					  <button ng-model="article.title"  class="btn btn-success btn-md"><i class='fa fa-heart'></i>LIKE</button>					
+
+	                  </form>	                 
+					</th>
+
+
+					<th>
+						<div >									
+							<i class="fa fa-comments-o" aria-hidden="true"></i>
+							<a href='' ng-click='hideComments = !hideComments'>
+							<div >COMMENT </div>							
+							</a>  		                	                 
+						</div>
+					</th>
+				</tr>
+			</table>
+			<div class='row' ng-hide='!hideComments'>
+				<div class='col-sm-1'>
+				new comment template
+					<div class='thumbnail'>
+						<img class='img-responsive user-photo' ng-src='https://ssl.gstatic.com/accounts/ui/avatar_2x.png'>
+					</div>
+					<!-- /thumbnail -->
+				</div>
+					<!-- /col-sm-1 -->
+				<div class='col-sm-5'>
+					<div class='panel panel-default'>
+						<div class='panel-heading'>
+
+
+						<form name="commentForm" ng-submit="feed.newComment(commentData, commentForm.$valid);" >
+						<div ng-class="{ 'has-success':!commentForm.postText.$pristine}">               
+
+							<i class="fa fa-comment-o" aria-hidden="true"></i>
+							<input class="form-control" type="text" name="commentText" placeholder="Add to the discussion" ng-model="feed.CommentData.postText" ng-minlength="3" ng-maxlength="200" required></input>
+				      
+							<!-- required displays err popup on submit but we want our own angular behaviour -->
+							<!-- only display if the form has been modified and there's a requirement error -->
+							<!-- we need the OR statement or else msg will never display if we go directly to submit when form is pristine -->
+							<p class="help-block" ng-show="(!commentForm.postText.$pristine && commentForm.postText.$error.required) || (commentForm.$submitted && commentForm.postText.$error.required)">You need to write something...
+							</p>
+							<!-- we will get error message in all scenarios except those pertaining to length if we don't include the $error.minlength etc -->
+							<ul ng-show="(!commentForm.title.$pristine && commentForm.postText.$error.minlength) || (!commentForm.postText.$pristine && commentForm.postText.$error.maxlength)" class="help-block">				
+								<li>Must be between 3 and 200 characters long.</li>
+						  	</ul>
+
+						  	<div class='panel-body'>
+							<!-- next line well well-lg adds curved box  -->
+								<div class='well well-lg'>	
+								<button class='btn btn-warning' >Submit</button>
+								</div>
+							</div><!-- /panel-body -->											   
+						</div>
+						</form>	
+							
+						</div>
+
+						
+					</div><!-- /panel panel-default -->				
+				</div><!-- /col-sm-5 -->					
+			</div><!-- /row -->					
+		</div>
+	</div>
+	
+	 
+			    
+</div>
+
+
+
+
+
+<!-- <div id="mainDiv" ></div> -->
+
+<!-- <div ng-model="newDiv"></div> -->
+
+<!-- <div class="newsFeed"></div> -->
+
+
+
+<!-- <div id="table-filter_wrapper">table-filter_wrapper</div> -->
+
+<div ng-model="feed.myWelcome" style="margin-top: 400px">
+	
+</div>
+
+
+
+
+
+

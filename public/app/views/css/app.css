@@ -1,0 +1,25 @@
+#login-screen, #main-chat-screen {
+  padding-top: 10px;
+}
+.main {
+  padding-top: 10px;
+  text-align: center;
+}
+#conversation {
+  font-size: 18px;
+  margin: 0px;
+  height: 300px;
+  overflow: scroll;
+  color: #f5fffa;
+  
+}
+.final {
+  font-color: #000;
+  /*font-color: #f5fffa;*/
+
+  
+}
+.interim {
+  font-color: #f00;
+  /*font-color: #f5fffa;  */
+}

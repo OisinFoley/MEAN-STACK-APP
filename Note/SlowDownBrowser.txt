@@ -1,0 +1,4 @@
+In Chrome:
+	Go to Network
+	Click Throttling, set to whichever(I chose GPRS)
+	This will purposely slow down the browser, can be handy for testing.

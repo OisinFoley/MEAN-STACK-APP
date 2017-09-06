@@ -1,0 +1,312 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, input, textarea {
+    font-family:'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;outline:none;
+}
+
+a.disabled {
+    text-decoration: none;
+    color: black;
+    cursor: default;
+}
+
+/*.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 40%;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}*/
+
+.newsFeed{margin:0; padding:0;}
+
+.newsFeed .event{border:1px solid #CCCBCB; margin-top:10px; font-size:12px; }
+
+.event:after{clear:both; width:100%; height:0; display:block; content:'';}
+
+.event time{ min-width:65px; float:left; display:block; padding:10px; border-right:1px solid #CCCBCB;  margin-right:15px; height:80px; position:relative;}
+.event time:after{
+ background:#fff;
+  border-bottom:1px solid #cacaca;
+  border-right:1px solid #cacaca;
+  content:'';
+  height:10px;
+  margin-top:-5px;
+  position:absolute;
+  right:-6px;
+  -webkit-transform:rotate(-45deg);
+  transform:rotate(-45deg);
+  top:50%;
+width:10px;}
+
+.event time span{display:block; text-align:center;}
+.event p{ padding:10px;}
+
+.event .eventDay{font-size:22px; font-weight:bold;}
+
+/*.red{color:yellow;}
+
+test
+*/
+
+main            {
+    padding-top:30px;
+}
+
+header .navbar  {
+    border-radius:0;
+}
+
+
+
+/* The magic */
+.col {
+  // Prepare for absolute slide
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  // Position inside column
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  
+  /* 
+    Visibility delay gives the previously hovered element time to slide out before disappearing.
+    Remove the `visibility` transition to slide in current element without sliding out previous element
+  */
+  $speed: 0.275s;
+  transition: all $speed ease-in-out, visibility 0s $speed;
+  visibility: hidden;
+  will-change: transform;
+  // Slides start below their columns, giving upward motion on hover
+  transform: translateY(100%);
+}
+
+.row:hover {
+  // Next row, slides are above their columns, giving downward motion on hover
+  & ~ .row .slide { transform: translateY(-100%); }
+  
+  // Current row, slides to the right of their columns, giving left motion on hover
+  .slide { transform: translateX(100%); }
+  
+  // Current row, next slides, slides to the left of their columns, giving right motion on hover
+  & .col:hover ~ .col .slide { transform: translateX(-100%); }
+  
+  // Current slide
+  .col:hover .slide {
+    transform: none;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+}
+
+/* Pen styling */
+// This a mess, ignore
+
+* { box-sizing: border-box; }
+
+body {
+  background: #fefefe;  
+  color: #333;
+  font: 14px /1.5 "Fira Sans", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin: 1.5em 0.5rem 1em;
+  text-align: center;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  max-width: 1200px;
+}
+
+.row { 
+  display: flex;
+}
+
+.col {
+  color: #fff;
+  flex: 1 1 auto;
+  min-height: 260px;
+  position: relative;
+  
+  h2 { 
+    font-weight: 300;
+    font-size: (14 * 1.33333) / 14 * 1rem;
+    line-height: 1.25;
+    margin: 0;
+    position: absolute;
+    bottom: 1.5rem; right: 1.5rem;
+    z-index: 0;
+  }
+}
+
+// Some size difference for variety
+.col:nth-child(2) { min-width: 20%; }
+.col:nth-child(4) { min-width: 33%; }
+.col:nth-child(3) + .col:nth-child(3) { min-width: 50%; }
+
+// Photo is in its own container, so we can zoom it
+.photo-container {
+  background: #0f0523 50% 50% / cover;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  transition: 1s;
+  transform-origin: bottom right;
+  
+  &::before {
+    background: linear-gradient(transparent, rgba(#431133, 0.5), #000320);
+    content: '';
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+  
+  .col:hover & {
+    transform: scale(1.25);
+  }
+}
+
+// Basic slide styles
+.slide {
+  background: rgba(#190115, 0.8);
+  padding: 0 1.5rem;
+}
+
+
+
+
+
+.heart {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  left: 75%;
+  margin-top: -10px;
+  transform: translate(-50%, -50%);
+  background: url(https://cssanimation.rocks/images/posts/steps/heart.png) no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  animation: fave-heart 1s steps(28);
+}
+.heart:active {
+  background-position: -2800px 0;
+  transition: background 1s steps(28);
+}
+@keyframes fave-heart {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -2800px 0;
+  }
+}
+
+#txtLike{
+   margin-left: 15px;
+   margin-top: 5px;
+}
+
+.likeRow{
+
+}
+
+
+.imgRed{
+    box-shadow: 0 4px 8px 0 rgba(245,24,28,1);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.imgRed:hover{
+    box-shadow: 0 8px 16px 0 rgba(245,24,28,1);
+}
+
+/*style login buttons*/
+/*.fbBtn{background: #3b5998}
+.twitterBtn{background: #1dcaff}
+.googleBtn{background-color: #d34836 }*/
+
+.formErrorResponse{
+  /*background: :#0000cc;*/
+  background: :yellow;
+
+}
+
+.red{
+  margin: 10px;
+  height:20px;
+  background-color:red;
+
+}
+
+
+.redAlt{
+  margin: 10px;
+  height:20px;
+  background-color:blue;
+}
+
+.serverMsg{
+  background:yellow;
+}
+
+/*I grabbed the below styling http://jsfiddle.net/chadkuehn/1twpzLz8/ , have cited in report*/
+
+.show-hide-message.ng-hide-remove{
+    -webkit-animation: zoomIn 0.6s both ease;
+    -moz-animation:zoomIn 0.6s both ease;
+    animation:zoomIn 0.6s both ease;
+    /*background: */
+}
+
+
+
+.spinner{
+    -webkit-animation: spin 1s infinite;
+    -moz-animation:spin 1s infinite;
+    animation:spin 1s infinite;
+}
+
+.glyphicon-spin {
+    -webkit-animation: spin 1000ms infinite linear;
+    animation: spin 1000ms infinite linear;
+}
+/*safari syntax*/
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(359deg);
+    }
+}
+/*regular syntax*/
+@keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}

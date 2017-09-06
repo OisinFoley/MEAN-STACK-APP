@@ -1,0 +1,1 @@
+had issue loading from cdn, hence local angular-router file

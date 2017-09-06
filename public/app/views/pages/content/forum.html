@@ -1,0 +1,94 @@
+<div ng-model="threadContainer" style="color:#42f4eb;background:#776fba;padding:25px;height:80vh;overflow: auto;">
+
+	<h2>Threads.</h2>
+	<h5><b>Read or contribute to some of the latest discussion topics</b></h5>	
+
+
+
+
+<form name="forumForm" ng-submit="forum.newThread(ThreadData, forumForm.$valid);" novalidate>
+	
+<table class="table table-hover table-responsive" ng-init="forum.readThreads()">
+			<tbody >
+			  	<tr style="color: blue" >
+				  <td class="active">			  	
+				  	Thread Title
+				  	<a ng-click="toggleArrowAtoZ = !toggleArrowAtoZ; toggle='AtoZ'; operator = toggleArrowAtoZ ? '+': '-' " ng-class="{'glyphicon glyphicon-chevron-up col-md-1' : toggleArrowAtoZ, 'glyphicon glyphicon-chevron-down col-md-1' : !toggleArrowAtoZ}"></a> <!-- A - Z -->
+				  	<i class="fa fa-sort-alpha-desc" aria-hidden="true"></i>
+				  </td>
+
+				  <td class="danger">
+
+				  	Date Added	
+					<a ng-click="toggleArrowPostcount = !toggleArrowPostcount; toggle='Count'; operator = toggleArrowPostcount ? '+': '-'" ng-class="{'glyphicon glyphicon-chevron-up col-md-1' : toggleArrowPostcount, 'glyphicon glyphicon-chevron-down col-md-1' : !toggleArrowPostcount}"></a> <!-- # posts -->
+					</div><i class="fa fa-clock-o" aria-hidden="true"></i>
+
+
+				  </td>
+				  <td class="active">
+
+				  	Date Modified			  	
+					<a ng-click="toggleArrowDate = !toggleArrowDate; toggle=''; operator = toggleArrowDate ? '+': '-' " ng-class="{'glyphicon glyphicon-chevron-up col-md-1' : toggleArrowDate, 'glyphicon glyphicon-chevron-down col-md-1' : !toggleArrowDate}"></a> <!-- date -->		
+					<i class="fa fa-clock-o" aria-hidden="true"></i>
+
+				  </td>
+				  <td class="danger">#Posts</td>			  
+				</tr>
+
+				<!-- filter added last minute so probably not working -->
+				<tr style="color:purple" ng-repeat="thread in forum.threads | filter: forum.isThread | orderBy:toggle=='AtoZ'? operator + 'title': toggle=='Count'? operator + 'dateAdded': operator + 'dateModified' " >
+				  <td class="active"><a class="sliding-u-l-r-l" ng-click="forum.openThread(thread)" href="#">{{thread.title}}</a></td>
+				  <td class="success">
+				  {{			  
+					  thread.dateAdded.substr(0,thread.dateAdded.indexOf('T')).concat
+					  (" " + thread.dateAdded.substr(thread.dateAdded.indexOf('T')+1 ,thread.dateAdded.indexOf('T')+8))
+					  
+				  }}
+				  <!-- can't see why not outputting -->
+				  </td>
+				  <td class="warning">
+				  {{			  
+					  thread.dateModified.substr(0,thread.dateModified.indexOf('T')).concat
+					  (" " + thread.dateModified.substr(thread.dateModified.indexOf('T')+1 ,thread.dateModified.indexOf('T')+8))
+					  
+				  }}
+				  </td>	
+				  <td class="success">	{{thread.posts.length}}	</td>		  
+				</tr>
+			</tbody>
+		</table>
+
+
+
+
+
+	<div ng-class="{ 'has-success':(forumForm.title.$valid && !forumForm.title.$pristine), 'has-error': (!forumForm.title.$valid && !forumForm.title.$pristine) || (!forumForm.title.$valid && forumForm.$submitted) }">
+		<label>New Thread Title:</label>
+		<input class="form-control" type="text" name="title" placeholder="Enter Thread Title..." ng-model="forum.ThreadData.title" ng-pattern="/^(([a-zA-Z0-9]{1,100}))+)+$/g" ng-minlength="3" ng-maxlength="100" required>
+
+		<p ng-show="(!forumForm.title.$pristine && forumForm.title.$error.required) || (forumForm.$submitted && forumForm.title.$error.required)" ng-class="{'forumMsg':forumForm }" >Title required
+		</p>
+		<!-- we will get error message in all scenarios except those pertaining to length if we don't include the $error.minlength etc -->
+		<ul ng-show="(!forumForm.title.$pristine && forumForm.title.$error.pattern) || (!forumForm.title.$pristine && forumForm.title.$error.minlength) || (!forumForm.title.$pristine && forumForm.title.$error.maxlength)"  ng-class="{'forumMsg':forumForm }">
+			<li>Must comprise 3 or more characters.</li>			
+		</ul>
+	</div>
+	
+	<br>
+	
+	<br>
+
+	<div>
+		
+		
+			<button class="btn btn-warning glyphicon glyphicon-plus col-md-3" type="submit">Add Thread</button>					
+
+		     <!-- when the user submits the form, the boolean is changed, this can be see through logging
+		     but the icon still fails to toggle, so i've left it on display for illustrative purposes  -->
+		<h1><span ng-show="!sendingForm" class="glyphicon glyphicon-refresh glyphicon-spin" style="padding:10px"></span></h1>
+
+	</div>
+	
+</form>
+
+</div>
