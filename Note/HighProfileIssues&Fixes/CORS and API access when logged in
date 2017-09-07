@@ -1,0 +1,1 @@
+XMLHttpRequest cannot load "URL HERE" Request header field x-access-token is not allowed by Access-Control-Allow-Headers in preflight response. -Your AuthInterceptors factory us attaching this x-access-token, simply remove for specific URLs

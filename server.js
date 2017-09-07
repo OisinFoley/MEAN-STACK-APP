@@ -1,4 +1,5 @@
 var express    = require('express');
+var cors = require('cors')
 var app 	   = express();
 var port       = process.env.PORT || 8080;
 //var port       = process.env.port || 8080;
@@ -24,12 +25,36 @@ var _ = require('underscore')._;
 
 var multer = require('multer');
 
+//app.use(cors);
+
 app.use(function(req, res, next) { //allow cross origin requests
-        res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
-//        res.header("Access-Control-Allow-Origin", "http://127.0.0.1");
-        res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-        next();
+	
+	// res.header('Access-Control-Expose-Headers', 'Authorization');
+	// res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,PATCH,OPTIONS');
+ //        //res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
+
+ //    res.header("Access-Control-Allow-Origin", "http://127.0.0.1");
+ //      res.header("Access-Control-Allow-Origin", "*");
+ //       //res.header("Access-Control-Allow-Origin", "167.114.118.40");
+
+ //    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        
+
+  //       res.header("Access-Control-Allow-Credentials: true");
+		// res.header("Access-Control-Allow-Origin: http://127.0.0.1:8080");
+		// res.header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+		// res.header("Access-Control-Allow-Headers: Origin, X-Requested-With, Content-Type, Accept, Authorization");
+
+		 res.header('Access-Control-Allow-Origin', "*");
+    res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type');
+    next();
+
+       
     });
+
+
+
 
 app.use(morgan('dev'));
 
@@ -54,6 +79,9 @@ var storage = multer.diskStorage({ //multers disk storage settings
     var upload = multer({ //multer settings    	
       storage: storage      
     }).single('file');
+
+
+//app.options('*', cors()); // include before other routes 
     
     //test
     app.post('/upload', function(req, res) {    
@@ -99,7 +127,7 @@ app.use('/api', appRoutes);
 
 mongoose.connect('mongodb://oisinfoley:p1nec0ne@ds127894.mlab.com:27894/oisinfoleymongo', function(err){	
 
- // mongoose.connect('mongodb://localhost:27017/', function(err){	
+//mongoose.connect('mongodb://localhost:27017/', function(err){	
 	if(err){
 		console.log("NOT connected to the db: " + err);
 	} else {
@@ -107,16 +135,24 @@ mongoose.connect('mongodb://oisinfoley:p1nec0ne@ds127894.mlab.com:27894/oisinfol
 	}
 });
 
+//app.use(cors);
+
+
 
 //asterisk = all, urls start from same locale as server.js hence new path format
-app.get('*', function(req,res){
+ app.get('*', function(req,res){ 	
+//app.all('*', function(req,res){
+
+
 	res.sendFile(path.join(__dirname + '/public/app/views/index.html' ));
 })
 
 
 
 // server.listen(port, "127.0.0.1" ,function(){
+
 server.listen(port, function(){	
+	//app.listen(port, function(){	
 //server.listen(function(){		
 	console.log('running the home world  that port wel call:  ' + port);
 });

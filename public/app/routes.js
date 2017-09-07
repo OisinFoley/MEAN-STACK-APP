@@ -36,7 +36,7 @@ var app = angular.module('appRoutes',['ngRoute'])
 		templateUrl: 'app/views/pages/content/feed.html',
 		controller: 'feedCtrl',
 		controllerAs: 'feed',
-		//authenticated: true
+		authenticated: true
 	})
 	.when('/forum', { 
 		templateUrl: 'app/views/pages/content/forum.html',

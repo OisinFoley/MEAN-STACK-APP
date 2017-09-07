@@ -1,6 +1,6 @@
 # Creating a MEAN stack app, the aim being to act as a Film & TV social media site.
 
-#### README file 1.8.7
+#### README file 1.8.8
 
 DEMO:
 
@@ -86,8 +86,13 @@ Added in previous commits (1.8.5)
 Added in previous commits (1.8.6) 
 Abandoned 2-tier responsive navbar in favour of mobile friendly(hamburger on resize) design
 
+Added in previous commits (1.8.7) 
+- Registration form validation can now take .co.uk, .com.au(and similar) email addresses
+
 ---
 
 Since last commit:
 
-- Registration form validation can now take .co.uk, .com.au(and similar) email addresses
+- Fixing feed issue whereby user sometimes had issues with display of articles when logged-in
+
+> - Had to stop setting token in my header when talking to external IP

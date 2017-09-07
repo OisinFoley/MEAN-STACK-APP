@@ -11,7 +11,7 @@
 		<div ng-repeat="article in feed.myfeeditems" class="row">		
 
 			<div class="col-lg-11 redShadow"  style="padding:10px" >
-				<a href="{{article.url}}" target="_blank"><image style="width:100%" ng-src="{{article.urlToImage}}"></image></a>
+				<a href="{{article.url}}" target="_blank"><image style="width:100%" ng-src="https{{article.urlToImage.indexOf('https')==-1?article.urlToImage.substr(4):article.urlToImage.substr(5) }}"></image></a>
 
 				<table class="col-lg-12 " style="background: #f43f3f">
 				<div >

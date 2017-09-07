@@ -17,7 +17,7 @@ var app = this;
 			app.isLoggedIn = true;
 			//if user is logged in, we want to get their info, this verificiation is done back in authServices.js
 			Auth.getUser().then(function(data){
-				 console.log("data.data is %s",data.data.id);
+				 console.log("data.data is %s",JSON.stringify(data.data));
 				app.id = data.data.id;
 				app.uuid = data.data.uuid;
 				app.username = data.data.username; //now accessible at front-end
@@ -40,8 +40,9 @@ var app = this;
 		//who is logged in so we can register his like efficiently
 
 				
+		articleData.user_uuid = app.uuid;
 
-		articleData.user_uuid = "8a357e7f-161c-4b56-814a-8fe08830843e";
+		// articleData.user_uuid = "8a357e7f-161c-4b56-814a-8fe08830843e";
 		app.loading  = true;
 		//console.log("%s",JSON.stringify(articleData));
 		
@@ -74,10 +75,13 @@ var app = this;
 		console.log("commentdata is %s", JSON.stringify(app.CommentData));
 
 		article.postText = app.CommentData.postText;
+		article.user_uuid = app.uuid;
+
 		//app.article.user_uuid = app.uuid;
+		console.log("CHECKING THEIR UUID : %s", app.uuid);
 
 		//having a CORS issue when logged in so have hardcoded a user's uuid
-		article.user_uuid = "8a357e7f-161c-4b56-814a-8fe08830843e";
+		//article.user_uuid = "8a357e7f-161c-4b56-814a-8fe08830843e";
 		
 	
 		if(valid){						
@@ -116,7 +120,14 @@ var app = this;
 
 			$http({
 				method: 'GET',
-				url: 'http://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=dbfc3f956d3d4b5caac1017cc5e18a9d'			
+				 url: 'https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=dbfc3f956d3d4b5caac1017cc5e18a9d'
+
+				// url: 'https://newsapi.org/v1/articles?source=entertainment-weekly&sortBy=top&apiKey=dbfc3f956d3d4b5caac1017cc5e18a9d',
+				// withCredentials: true,
+		  //       headers: {
+		  //                   'Content-Type': 'application/json; charset=utf-8',
+		  //                   'Access-Control-Allow-Credentials' : true
+		  //       }			
 			}).then(function successCallback(response) {
 													
 				app.myfeeditems = response.data.articles;			

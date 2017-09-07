@@ -8,7 +8,7 @@
     "email": "oisinfoley@yahoo.co.uk"
   },
   "repository": {
-    "type": "git"    
+    "type": "git"
   },
   "engines": {
     "node": "8.4.0",
@@ -23,6 +23,7 @@
     "body-parser": "^1.16.1",
     "bower": "~1.2.8",
     "connect": "^3.6.3",
+    "cors": "^2.8.4",
     "ejs": "~0.8.5",
     "express": "^4.14.1",
     "express-session": "^1.15.3",

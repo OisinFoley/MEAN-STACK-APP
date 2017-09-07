@@ -8,6 +8,7 @@ angular.module('userApp',['appRoutes','userControllers','userServices','ngAnimat
 
 .config(function($httpProvider){
 	//console.log('testing main app config');	
+	
 	$httpProvider.interceptors.push('AuthInterceptors');
 	//this config applicatiojn to intercept all http requests, 
 	//with the factory that we created, which basically assigns the token to the header

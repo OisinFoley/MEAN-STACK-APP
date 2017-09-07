@@ -94,11 +94,55 @@ while they interact with the app
 .factory('AuthInterceptors', function(AuthToken){
 	var authInterceptorsFactory = {};
 
+
+	var externalIPs = ["newsapi.org" ];
+
 	authInterceptorsFactory.request = function(config){
 		var token = AuthToken.getToken();
+		console.log("AAA : %s", JSON.stringify(config));
+		console.log("BBB : %s", JSON.stringify(config.url));
+
+
+		
+
+
+		if(!config.url.includes('newsapi.org')){
+			config.headers['x-access-token'] = token;
+		}
+
+		//break is breaking our code and this explains why: https://stackoverflow.com/questions/18023787/illegal-break-statement-node-js
+		//tl;dr we're inside a function and nodejs doesn't allow this. there's ways around but for now go with what's simplest
+		// if(config.url.indexOf('://127.0.0.1:8080') == -1 && config.url.indexOf('://shrouded-coast-27950.herokuapp.com') == -1){
+		// 	break;
+		// } else {
+		// 	if(token){			
+		// 		config.headers['x-access-token'] = token;
+		// 	}
+		// }
+
+
+
+
+		//abandoned and it seemed longer and not as efficient. gone with the above commented out solution
+		// if(token){
+		// 	for(var x =0; x < externalIPs.length; x++){
+		// 		if(config.url.includes(externalIPs[x])){
+		// 	    	console.log("beeeeef22222");
+
+		// 	    }
+		// 	}
+		// 	//break outer loop if value found
+		// 	config.headers['x-access-token'] = token;
+
+		// 	//if(token) config.headers['x-access-token'] = token;
+		// }
+
+		
+		
+
 
 		//if token exists, configure/tell our header that its access-token key is the object named 'token'
-		if(token) config.headers['x-access-token'] = token;
+		// if(token) config.headers['x-access-token'] = token;
 
 		return config;
 	}
