@@ -1,10 +1,16 @@
 # Creating a MEAN stack app, the aim being to act as a Film & TV social media site.
 
-#### README file 1.8.6
+#### README file 1.8.7
 
 DEMO:
 
-- Now live [here](https://shrouded-coast-27950.herokuapp.com/)
+- Now live [here](https://shrouded-coast-27950.herokuapp.com/), still ironing out bugs that aren't present in local deployment
+- From root of project, run node/nodemon server.js
+- At this moment, for the full effect it's recommended to: 
+
+> - Pull this repo and run locally for full effect.
+
+> - Register then use a quick social login for full interaction capabilities.
 
 Core Functionality:
 
@@ -68,8 +74,20 @@ Added in previous commits (1.7.3) (an add-on to backend validation)
 - Check DB for username and email from client onblur(lostfocus).
 - Prettify inputs by using load animation onblur, need to throttle connection for full effect.
 
+Added in previous commits (1.8) 
+- Rewrote backend to model 1:M relationships whereby an Object represents "1", and a nested array property represents the "Many". Data was previously modelled around link tables to represent a 1:M.
+
+Added in previous commits (1.8.1-4) 
+- Misc UI work.
+
+Added in previous commits (1.8.5) 
+- Deployed to Heroku
+
+Added in previous commits (1.8.6) 
+Abandoned 2-tier responsive navbar in favour of mobile friendly(hamburger on resize) design
+
 ---
 
 Since last commit:
 
-- Abandoned 2-tier responsive navbar in favour of mobile friendly(hamburger on resize) design
+- Registration form validation can now take .co.uk, .com.au(and similar) email addresses

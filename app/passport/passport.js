@@ -28,8 +28,8 @@ module.exports = function(app,passport){
 	passport.use(new FacebookStrategy({
 	    clientID: '258839661189771',
 	    clientSecret: '97170bfd22ae9af2272253b1a54a473a',
-	    // callbackURL: "http://localhost:8080/auth/facebook/callback",
-	    callbackURL: "https://shrouded-coast-27950.herokuapp.com/auth/facebook/callback",
+	    callbackURL: "http://127.0.0.1:8080/auth/facebook/callback",
+	    // callbackURL: "https://shrouded-coast-27950.herokuapp.com/auth/facebook/callback",
 
 	    profileFields: ['id', 'displayName', 'photos', 'email']
 	  },
@@ -52,7 +52,9 @@ module.exports = function(app,passport){
 	passport.use(new TwitterStrategy({
 	    consumerKey: '9lunlEGgII2j1XS9kwHKBJZws',
 	    consumerSecret: 'qh8jkFoaRBlvpwjdDE88tbtUy3fB0cNyLUEbCd1RpJx34dAzv6',
-	    callbackURL: "https://shrouded-coast-27950.herokuapp.com/auth/twitter/callback",
+	    // callbackURL: "https://shrouded-coast-27950.herokuapp.com/auth/twitter/callback",
+	    callbackURL: "http://127.0.0.1:8080/auth/twitter/callback",
+
 	    //profileFields: ['id', 'displayName', 'photos', 'email'],	    
 	    //userProfileURL: "https://api.twitter.com/1.1/account/verify_credentials.json"
 	    userProfileURL: "https://api.twitter.com/1.1/account/verify_credentials.json?include_email=true"﻿	    
@@ -77,8 +79,8 @@ module.exports = function(app,passport){
 	passport.use(new GoogleStrategy({		
 	    clientID: '248816080905-8aet6m91qbvt84rgunocu97poapjjq77.apps.googleusercontent.com',	    
 	    clientSecret: 'pLiFoyz8plzCE-e7NM_pqobO',
-	    // callbackURL: "http://localhost:8080/auth/google/callback"
-	    callbackURL: "https://shrouded-coast-27950.herokuapp.com/auth/google/callback"
+	    callbackURL: "http://127.0.0.1:8080/auth/google/callback"
+	    // callbackURL: "https://shrouded-coast-27950.herokuapp.com/auth/google/callback"
 	    
 	  },	  
 	  function(accessToken, refreshToken, profile, done) {	

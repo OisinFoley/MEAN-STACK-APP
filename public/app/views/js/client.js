@@ -97,8 +97,8 @@ $(document).ready(function() {
   //var socket = io.connect();
   // var socket = io.connect("12.34.56.78:8080");
 
-  // var socket = io.connect("127.0.0.1:8080");
-  var socket = io.connect("https://shrouded-coast-27950.herokuapp.com/");
+  var socket = io.connect("127.0.0.1:8080");
+  // var socket = io.connect("https://shrouded-coast-27950.herokuapp.com/");
   
 
   

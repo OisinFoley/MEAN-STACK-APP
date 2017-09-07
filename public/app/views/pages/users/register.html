@@ -25,7 +25,7 @@
 	<div ng-class="{ 'has-success':(regForm.email.$valid && !regForm.email.$pristine && !register.emailInvalid), 'has-error':(!regForm.email.$valid && !regForm.email.$pristine) || (!regForm.email.$valid && regForm.$submitted) ||  register.emailInvalid }">
 		<label ng-class="{'formLabels':regForm}">Email:</label>
 
-		<input class="form-control" type="text" name="email" placeholder="please enter an email" ng-model="register.regData.email" ng-pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/" ng-minlength="3" ng-maxlength="25" ng-blur="register.checkEmail(regData)" required>
+		<input class="form-control" type="text" name="email" placeholder="please enter an email" ng-model="register.regData.email" ng-pattern="/^\w+@[a-zA-Z_]+?\.[a-zA-Z\.]{2,6}$/" ng-minlength="3" ng-maxlength="25" ng-blur="register.checkEmail(regData)" required>
 		
 		<!-- regex says: match letter/number/whitespace, then @, then a-z upper or lower or an underscore, then a dot(which we've escaped), then a-z upper or ower again, then what's after the dot can be between 2-3 chars in this scenario -->
 		<p  ng-show="(!regForm.email.$pristine && regForm.email.$error.required) || (regForm.$submitted && regForm.email.$error.required)" ng-class="{'errorMsg':regForm}">Email required

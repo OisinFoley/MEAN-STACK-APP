@@ -36,19 +36,19 @@ var app = angular.module('appRoutes',['ngRoute'])
 		templateUrl: 'app/views/pages/content/feed.html',
 		controller: 'feedCtrl',
 		controllerAs: 'feed',
-		authenticated: false
+		//authenticated: true
 	})
 	.when('/forum', { 
 		templateUrl: 'app/views/pages/content/forum.html',
 		controller: 'forumCtrl',
 		controllerAs: 'forum',
-		authenticated: false
+		authenticated: true
 	})
 	.when('/thread/:_id', { 
 		templateUrl: 'app/views/pages/content/thread.html',
 		controller: 'forumCtrl',
 		controllerAs: 'forum',
-		authenticated: false
+		authenticated: true
 	})
 	.when('/imageTest', { 
 		templateUrl: 'app/views/pages/content/imageTest.html',
@@ -73,7 +73,7 @@ var app = angular.module('appRoutes',['ngRoute'])
 		templateUrl: 'app/views/pages/content/learn.html',
 		controller: 'TypeAheadController',
 		controllerAs: 'typeahead',
-		authenticated: false		
+		authenticated: true		
 	})	
 	
 	.when('/logout', { 
@@ -137,7 +137,7 @@ app.run(['$rootScope','Auth','$location',function($rootScope, Auth, $location) {
 $rootScope.$on('$routeChangeStart', function(event,next,current) {				
 		if(next.$$route.authenticated){ //if route requires authenticated to be true
 			if(!Auth.isLoggedIn()) {
-				
+				console.log("jumping jacks");
 				//without this, index renders but not it's nested view				
 				event.preventDefault();
 				
@@ -145,6 +145,7 @@ $rootScope.$on('$routeChangeStart', function(event,next,current) {
 			}
 			
 		} 	else if (!next.$$route.authenticated) {
+			console.log("jumping jacks 2");
 				if(Auth.isLoggedIn()) {				
 					event.preventDefault();				
 					$location.path('/feed');
